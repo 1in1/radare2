@@ -14,7 +14,7 @@ static RCoreHelpMessage help_msg_ecH = {
 };
 
 static RCoreHelpMessage help_msg_e = {
-	"Usage:", "e [var[=value]]", "Evaluable vars",
+	"Usage:", "e [var[=value]]", "evaluable vars",
 	"e","?asm.bytes", "show description",
 	"e", "??", "list config vars with description",
 	"e", " a", "get value of var 'a'",

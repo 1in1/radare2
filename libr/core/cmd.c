@@ -55,7 +55,7 @@ static void cmd_debug_reg(RCore *core, const char *str);
 #include "cmd_help.c"
 
 static RCoreHelpMessage help_msg_dollar = {
-	"Usage:", "$alias[=cmd] [args...]", "Alias commands and data (See ?$? for help on $variables)",
+	"Usage:", "$alias[=cmd] [args...]", "alias commands and data (See ?$? for help on $variables)",
 	"$", "", "list all defined aliases",
 	"$*", "", "list all defined aliases and their values, with unprintable characters escaped",
 	"$**", "", "same as above, but if an alias contains unprintable characters, b64 encode it",
@@ -77,7 +77,7 @@ static RCoreHelpMessage help_msg_dollar = {
 };
 
 static RCoreHelpMessage help_msg_l = {
-	"Usage:", "l[erls] [arg]", "Internal less (~..) and file listing (!ls)",
+	"Usage:", "l[erls] [arg]", "internal less (~..) and file listing (!ls)",
 	"lu", " [path]", "same as #!lua",
 	"ll", " [path]", "same as ls -l",
 	"lr", " [path]", "same as ls -r",
@@ -124,7 +124,7 @@ static RCoreHelpMessage help_msg_j = {
 
 static RCoreHelpMessage help_msg_dash = {
 	"Usage:", "-", "open editor and run the r2 commands in the saved document",
-	"", "'-' '.-' '. -'", " those three commands do the same",
+	"", "'-' '.-' '. -'", "those three commands do the same",
 	"-", "8", "same as s-8, but shorter to type (see +? command)",
 	"-a", " x86", "same as r2 -a x86 or e asm.arch=x86",
 	"-b", " 32", "same as e or r2 -e",
@@ -140,7 +140,7 @@ static RCoreHelpMessage help_msg_dash = {
 };
 
 static RCoreHelpMessage help_msg_star = {
-	"Usage:", "*<addr>[=[0x]value]", "Pointer read/write data/values",
+	"Usage:", "*<addr>[=[0x]value]", "pointer read/write data/values",
 	"*", "entry0=cc", "write trap in entrypoint",
 	"*", "entry0+10=0x804800", "write value in delta address",
 	"*", "entry0", "read byte at given address",
@@ -184,7 +184,7 @@ static RCoreHelpMessage help_msg_dot = {
 };
 
 static RCoreHelpMessage help_msg_equal = {
-	"Usage:", " =[:!+-=ghH] [...]", " # connect with other instances of r2",
+	"Usage:", " =[:!+-=ghH] [...]", "# connect with other instances of r2",
 	"\nremote commands:", "", "",
 	"=", "", "list all open connections",
 	"=<", "[fd] cmd", "send output of local command to remote fd", // XXX may not be a special char
@@ -215,7 +215,7 @@ static RCoreHelpMessage help_msg_equal = {
 };
 
 static RCoreHelpMessage help_msg_equalh = {
-	"Usage:", " =[hH] [...]", " # http server",
+	"Usage:", " =[hH] [...]", "# http server",
 	"http server:", "", "",
 	"=h", " port", "listen for http connections (r2 -qc=H /bin/ls)",
 	"=h-", "", "stop background webserver",
@@ -235,7 +235,7 @@ static RCoreHelpMessage help_msg_equal_equal = {
 };
 
 static RCoreHelpMessage help_msg_equal_more = {
-	"Usage:", " =+ [proto://][host]:[port](/[path])", " # add connection to remote r2",
+	"Usage:", " =+ [proto://][host]:[port](/[path])", "# add connection to remote r2",
 	"=+", "tcp://localhost:9090", "communicates with another instance running '& .:9090'",
 	"=+", "http://localhost:9090/cmd", "talks to remote r2 webserver '& =h'",
 	"=+", "rap://localhost:9090/cmd", "talks to remote r2 webserver 'r2 rap://:9090'",
@@ -243,14 +243,14 @@ static RCoreHelpMessage help_msg_equal_more = {
 };
 
 static RCoreHelpMessage help_msg_equalg = {
-	"Usage:", " =[g] [...]", " # gdb server",
+	"Usage:", " =[g] [...]", "# gdb server",
 	"gdbserver:", "", "",
 	"=g", " port file [args]", "listen on 'port' debugging 'file' using gdbserver",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_b = {
-	"Usage:",  "b[f] [arg]\n", "Get/Set block size",
+	"Usage:",  "b[f] [arg]\n", "get/set block size",
 	"b", " 33", "set block size to 33",
 	"b", " eip+4", "numeric argument can be an expression",
 	"b", "", "display current block size",
@@ -265,7 +265,7 @@ static RCoreHelpMessage help_msg_b = {
 };
 
 static RCoreHelpMessage help_msg_k = {
-	"Usage:", "k[s] [key[=value]]", "Sdb Query",
+	"Usage:", "k[s] [key[=value]]", "SDB Query",
 	"k", " anal/**", "list namespaces under anal",
 	"k", " anal/meta/*", "list kv from anal > meta namespaces",
 	"k", " anal/meta/meta.0x80404", "get value for meta.0x80404 key",
@@ -273,7 +273,7 @@ static RCoreHelpMessage help_msg_k = {
 	"k", " foo=bar", "set value",
 	"k", "", "list keys",
 	"kd", " [file.sdb] [ns]", "dump namespace to disk",
-	"kj", "", "List all namespaces and sdb databases in JSON format",
+	"kj", "", "list all namespaces and sdb databases in JSON format",
 	"ko", " [file.sdb] [ns]", "open file into namespace",
 	"ks", " [ns]", "enter the sdb query shell",
 	//"kl", " ha.sdb", "load keyvalue from ha.sdb",
@@ -282,7 +282,7 @@ static RCoreHelpMessage help_msg_k = {
 };
 
 static RCoreHelpMessage help_msg_r = {
-	"Usage:", "r[+-][ size]", "Resize file",
+	"Usage:", "r[+-][ size]", "resize file",
 	"r", "", "display file size",
 	"rj", "", "display the file size in JSON format",
 	"r", " size", "expand or truncate file to given size",
@@ -341,7 +341,7 @@ static RCoreHelpMessage help_msg_uc = {
 };
 
 static RCoreHelpMessage help_msg_y = {
-	"Usage:", "y[fptxy] [len] [[@]addr]", " # See wd? for memcpy, same as 'yf'.",
+	"Usage:", "y[fptxy] [len] [[@]addr]", "# see wd? for memcpy, same as 'yf'.",
 	"y!", "", "open cfg.editor to edit the clipboard",
 	"y", " 16 0x200", "copy 16 bytes into clipboard from 0x200",
 	"y", " 16 @ 0x200", "copy 16 bytes into clipboard from 0x200",
@@ -369,7 +369,7 @@ static RCoreHelpMessage help_msg_y = {
 };
 
 static RCoreHelpMessage help_msg_triple_exclamation = {
-	"Usage:", "!!![-*][cmd] [arg|$type...]", " # user-defined autocompletion for commands",
+	"Usage:", "!!![-*][cmd] [arg|$type...]", "# user-defined autocompletion for commands",
 	"!!!", "", "list all autocompletions",
 	"!!!?", "", "show this help",
 	"!!!", "-*", "remove all user-defined autocompletions",
@@ -643,7 +643,7 @@ static int cmd_head(void *data, const char *_input) { // "head"
 	char *arg = strchr (input, ' ');
 	char *tmp, *count;
 	static RCoreHelpMessage help_msg_h = {
-		"head", " [n] [file]", "Print first n lines in file (default n=5)",
+		"head", " [n] [file]", "print first n lines in file (default n=5)",
 		NULL
 	};
 	if (arg) {
@@ -6355,7 +6355,7 @@ R_API void r_core_cmd_init(RCore *core) {
 		{ "r", "change file size", cmd_resize },
 		{ "s", "seek to an offset", cmd_seek },
 		{ "t", "type information (cparse)", cmd_type },
-		{ "T", "Text log utility", cmd_log },
+		{ "T", "text log utility", cmd_log },
 		{ "u", "uname/undo", cmd_undo },
 		{ "<", "pipe into RCons.readChar", cmd_pipein },
 		{ "V", "enter visual mode", cmd_visual },

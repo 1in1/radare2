@@ -398,7 +398,7 @@ static bool analyzeFunction(RCore *core, ut64 addr) {
 static int r_cmd_anal_call(void *user, const char *input) {
 	RCore *core = (RCore *) user;
 	static RCoreHelpMessage help_msg_a2f = {
-		"Usage:", "a2f", "Experimental function analysis",
+		"Usage:", "a2f", "experimental function analysis",
 		"a2f", "", "like af, but with an experimental engine. see anal.a2f",
 		NULL
 	};

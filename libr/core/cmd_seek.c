@@ -5,7 +5,7 @@
 static void __core_cmd_search_backward_prelude(RCore *core, bool doseek, bool forward);
 
 static RCoreHelpMessage help_msg_s = {
-	"Usage: s", "", " # Help for the seek commands. See ?$? to see all variables",
+	"Usage: s", "", "# help for the seek commands. See ?$? to see all variables",
 	"s", "", "print current address",
 	"s", " addr", "seek to address",
 	"s.", "[?]hexoff", "seek honoring a base from core->offset",
@@ -41,7 +41,7 @@ static RCoreHelpMessage help_msg_s = {
 };
 
 static RCoreHelpMessage help_msg_sdot = {
-	"Usage:", "s.", "Seek here or there (near seeks)",
+	"Usage:", "s.", "seek here or there (near seeks)",
 	"s.", "", "seek here, same as 's $$'",
 	"s..", "32a8", "seek to the same address but replacing the lower nibbles",
 	NULL
@@ -55,7 +55,7 @@ static RCoreHelpMessage help_msg_sh = {
 };
 
 static RCoreHelpMessage help_msg_sC = {
-	"Usage:", "sC", "Comment grep",
+	"Usage:", "sC", "comment grep",
 	"sC", "*", "list all comments",
 	"sC", " str", "seek to the first comment matching 'str'",
 	NULL
@@ -86,7 +86,7 @@ static RCoreHelpMessage help_msg_sl = {
 };
 
 static RCoreHelpMessage help_msg_ss = {
-	"Usage: ss", "", " # Seek silently (not recorded in the seek history)",
+	"Usage: ss", "", "# seek silently (not recorded in the seek history)",
 	"s?", "", "works with all s subcommands",
 	NULL
 };

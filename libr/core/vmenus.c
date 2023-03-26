@@ -138,7 +138,7 @@ R_API bool r_core_visual_esil(RCore *core, const char *input) {
 	ut8 buf[sizeof (ut64)];
 	unsigned int addrsize = r_config_get_i (core->config, "esil.addr.size");
 	static RCoreHelpMessage help_msg_aev = {
-		"Usage:", "aev [esil]", "Visual esil debugger",
+		"Usage:", "aev [esil]", "visual esil debugger",
 		"aev", " [esil]", "visual esil debugger for the given expression or current instruction",
 		NULL
 	};
@@ -3218,8 +3218,8 @@ static RCoreHelpMessage help_var_visual = {
 };
 
 static RCoreHelpMessage help_visual_anal_actions = {
-	"functions:", "Add, Modify, Delete, Xrefs Calls Vars",
-	"variables:", "Add, Modify, Delete",
+	"functions:", "add, modify, delete, xrefs calls vars",
+	"variables:", "add, modify, delete",
 	NULL
 };
 

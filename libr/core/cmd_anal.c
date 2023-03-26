@@ -7,7 +7,7 @@
 // should be 1 unless it makes the CI sad
 
 static RCoreHelpMessage help_msg_af_plus = {
-	"Usage:", "af+", " [addr] ([name] ([type] [diff]))",
+	"Usage:", "af+", "[addr] ([name] ([type] [diff]))",
 	"af+", "$$", "add a raw function element. See afb+ to add basic blocks to it",
 	"af+", "$$ main", "add new function in current offset with 'main' as name",
 	NULL
@@ -52,19 +52,19 @@ static RCoreHelpMessage help_msg_a = {
 };
 
 static RCoreHelpMessage help_msg_afna = {
-	"Usage:", "afna", " # construct a function name and rename the function for the current offset.",
-	"", "", "Based on flags or methods calls found inside that function.",
+	"usage:", "afna", "# construct a function name and rename the function for the current offset.",
+	"", "", "based on flags or methods calls found inside that function.",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_afu = {
-	"Usage:", "afu", "[addr]   # resize and analyze function from current address until addr.",
+	"Usage:", "afu", "[addr]   # Resize and analyze function from current address until addr.",
 	"afu", " 0x100004093", "resize and analyze function from current address until 0x100004093",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_aae = {
-	"Usage:", "aae", "[pf] ([addr]) # analyze all kind of stuff using esil",
+	"Usage:", "aae", "[pf] ([addr]) # Analyze all kind of stuff using esil",
 	"aaep", "", "same as aepa@@@i - define anal pins by import flag names",
 	"aaep", "a", "run 'aep ret0@@@i' and then 'aaep' - all unknown imports are faked to return 0",
 	"aaef", "", "emulate all functions using esil to find out computed references (same as aef@@@F)",
@@ -74,14 +74,14 @@ static RCoreHelpMessage help_msg_aae = {
 };
 
 static RCoreHelpMessage help_msg_aav = {
-	"Usage:", "aav", "[sat] # find values referencing a specific section or map",
+	"Usage:", "aav", "[sat] # Find values referencing a specific section or map",
 	"aav", "", "find absolute reference values",
 	"aavr", "", "find relative reference values (address + 4 byte signed int)",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_aan = {
-	"Usage:", "aan", "[rg]   # automatically name functions.",
+	"Usage:", "aan", "[rg]   # Automatically name functions.",
 	"aan", "", "autoname all functions",
 	"aang", "", "autoname all golang functions",
 	"aanr", "", "auto-noreturn propagation",
@@ -95,13 +95,13 @@ static RCoreHelpMessage help_msg_afm = {
 };
 
 static RCoreHelpMessage help_msg_aF = {
-	"Usage:", "aF", " # analyze a function, but using anal.depth=1",
+	"Usage:", "aF", "# analyze a function, but using anal.depth=1",
 	"aF", "", "check af? for more options and information.",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_an = {
-	"Usage:", "an", " # analyze name for the current address",
+	"Usage:", "an", "# analyze name for the current address",
 	"an", "", "show flag/function/symbol name",
 	"an*", "", "same as above but in r2 commands",
 	"anj", "", "same as above but in json",
@@ -115,7 +115,7 @@ static RCoreHelpMessage help_msg_a8 = {
 };
 
 static RCoreHelpMessage help_msg_ap = {
-	"Usage:", "ap[?]", " # analyze prelude in current offset",
+	"Usage:", "ap[?]", "# analyze prelude in current offset",
 	"ap", "", "check if current offset contains a function prelude",
 	"apl", "", "list available function preludes defined by the arch plugin",
 	// "ap+", "bytes:mask:align", "add a new function prelude",
@@ -127,7 +127,7 @@ static RCoreHelpMessage help_msg_ap = {
 };
 
 static RCoreHelpMessage help_msg_avg = {
-	"Usage:", "avg", " # analyze variable global",
+	"Usage:", "avg", "# analyze variable global",
 	"avg", "", "use ESIL emulation to find out arguments of a call (uses 'abte')",
 	"avg", " [type] [name]", "add global",
 	"avg-", "", "delete global",
@@ -135,14 +135,14 @@ static RCoreHelpMessage help_msg_avg = {
 };
 
 static RCoreHelpMessage help_msg_aC = {
-	"Usage:", "aC[fej] [addr-of-call]", " # analyze call args",
+	"Usage:", "aC[fej] [addr-of-call]", "# analyze call args",
 	"aCe", "", "use ESIL emulation to find out arguments of a call (uses 'abte')",
 	"aCf", "", "same as .aCe* $$ @@=`pdr~call`",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_aaf = {
-	"Usage:", "aaf[efrt?]", " # analyse all functionsee also 'af' and 'afna'",
+	"Usage:", "aaf[efrt?]", "# analyse all functionsee also 'af' and 'afna'",
 	"aaf", "", "same as afr@@c:isq",
 	"aafe", " ", "same as aef@@F",
 	"aaff", "", "set a flag for every function",
@@ -153,7 +153,7 @@ static RCoreHelpMessage help_msg_aaf = {
 };
 
 static RCoreHelpMessage help_msg_aaa = {
-	"Usage:", "aa[a[a[a]]]", " # automatically analyze the whole program",
+	"Usage:", "aa[a[a[a]]]", "# automatically analyze the whole program",
 	"a", " ", "show code analysis statistics",
 	"aa", " ", "alias for 'af@@ sym.*;af@entry0;afva'",
 	"aaa", "", "perform deeper analysis, most common use",
@@ -163,7 +163,7 @@ static RCoreHelpMessage help_msg_aaa = {
 };
 
 static RCoreHelpMessage help_msg_aa = {
-	"Usage:", "aa[0*?]", " # see also 'af' and 'afna'",
+	"Usage:", "aa[0*?]", "# see also 'af' and 'afna'",
 	"aa", " ", "alias for 'af@@ sym.*;af@entry0;afva'", //;.afna @@ fcn.*'",
 	"aaa", "[?]", "autoname functions after aa (see afna)",
 	"aab", "", "abb across bin.sections.rx",
@@ -349,7 +349,7 @@ static RCoreHelpMessage help_msg_ae = {
 };
 
 static RCoreHelpMessage help_detail_ae = {
-	"Examples:", "ESIL", " examples and documentation",
+	"Examples:", "ESIL", "examples and documentation",
 	"=", "", "assign updating internal flags",
 	":=", "", "assign without updating internal flags",
 	"+=", "", "a+=b => b,a,+=",
@@ -435,7 +435,7 @@ static RCoreHelpMessage help_detail_ae = {
 };
 
 static RCoreHelpMessage help_msg_aea = {
-	"Examples:", "aea", " show regs and memory accesses used in a range",
+	"Examples:", "aea", "show regs and memory accesses used in a range",
 	"aea", "  [ops]", "show regs/memory accesses used in N instructions",
 	"aea*", " [ops]", "create mem.* flags for memory accesses",
 	"aeab", "", "show regs used in current basic block",
@@ -459,7 +459,7 @@ static RCoreHelpMessage help_msg_aea = {
 };
 
 static RCoreHelpMessage help_msg_aec = {
-	"Examples:", "aec", " continue until ^c",
+	"Examples:", "aec", "continue until ^c",
 	"aec", "", "continue until exception",
 	"aecs", "", "continue until syscall",
 	"aecc", "", "continue until call",
@@ -469,8 +469,8 @@ static RCoreHelpMessage help_msg_aec = {
 };
 
 static RCoreHelpMessage help_msg_aeC = {
-	"Examples:", "aeC", " arg0 arg1 ... @ calladdr",
-	"aeC", " 1 2 @ sym._add", "Call sym._add(1,2)",
+	"Examples:", "aeC", "arg0 arg1 ... @ calladdr",
+	"aeC", " 1 2 @ sym._add", "call sym._add(1,2)",
 	NULL
 };
 
@@ -522,9 +522,9 @@ static RCoreHelpMessage help_msg_af = {
 	"af-", " [addr]", "clean all function analysis data (or function at addr)",
 	"afa", "", "analyze function arguments in a call (afal honors dbg.funcarg)",
 	"afB", " 16", "set current function as thumb (change asm.bits)",
-	"afb", "[?] [addr]", "List basic blocks of given function",
+	"afb", "[?] [addr]", "list basic blocks of given function",
 	"afb+", " fcnA bbA sz [j] [f] ([t]( [d]))", "add bb to function @ fcnaddr",
-	"afbF", "([0|1])", "Toggle the basic-block 'folded' attribute",
+	"afbF", "([0|1])", "toggle the basic-block 'folded' attribute",
 	"afc", "[?] type @[addr]", "set calling convention for function",
 	"afC[lc]", " ([addr])@[addr]", "calculate the Cycles (afC) or Cyclomatic Complexity (afCc)",
 	"afd", "[addr]","show function + delta for given offset",
@@ -549,7 +549,7 @@ static RCoreHelpMessage help_msg_af = {
 };
 
 static RCoreHelpMessage help_msg_afb = {
-	"Usage:", "afb", " list basic blocks of given function",
+	"Usage:", "afb", "list basic blocks of given function",
 	".afbr-", "", "set breakpoint on every return address of the function",
 	".afbr-*", "", "remove breakpoint on every return address of the function",
 	"afb", " [addr]", "list basic blocks of function",
@@ -615,7 +615,7 @@ static RCoreHelpMessage help_msg_afis = {
 };
 
 static RCoreHelpMessage help_msg_afl = {
-	"Usage:", "afl", " List all functions",
+	"Usage:", "afl", "list all functions",
 	"afl", "", "list functions",
 	"afl.", "", "display function in current offset (see afi.)",
 	"afl+", "", "display sum all function sizes",
@@ -634,7 +634,7 @@ static RCoreHelpMessage help_msg_afl = {
 };
 
 static RCoreHelpMessage help_msg_afll = {
-	"Usage:", "", " List functions in verbose mode",
+	"Usage:", "", "list functions in verbose mode",
 	"", "", "",
 	"Table fields:", "", "",
 	"", "", "",
@@ -657,7 +657,7 @@ static RCoreHelpMessage help_msg_afll = {
 };
 
 static RCoreHelpMessage help_msg_afn = {
-	"Usage:", "afn[sa]", " Analyze function names",
+	"Usage:", "afn[sa]", "analyze function names",
 	"afn", " [name]", "rename the function",
 	"afn", " base64:encodedname", "rename the function",
 	"afn.", "", "same as afn without arguments. show the function name in current offset",
@@ -668,7 +668,7 @@ static RCoreHelpMessage help_msg_afn = {
 };
 
 static RCoreHelpMessage help_msg_afs = {
-	"Usage:", "afs[r]", " Analyze function signatures",
+	"Usage:", "afs[r]", "analyze function signatures",
 	"afs", "[!] ([fcnsign])", "get/set function signature at current address (afs! uses cfg.editor)",
 	"afs*", " ([signame])", "get function signature in flags",
 	"afsj", " ([signame])", "get function signature in JSON",
@@ -683,7 +683,7 @@ static RCoreHelpMessage help_msg_aft = {
 };
 
 static RCoreHelpMessage help_msg_afv = {
-	"Usage:", "afv[rbs]"," Function variables manipulation",
+	"Usage:", "afv[rbs]", "function variables manipulation",
 	"afv*", "", "output r2 command to add args/locals to flagspace",
 	"afv-", "([name])", "remove all or given var",
 	"afv=", "", "list function variables and arguments with disasm refs",
@@ -834,16 +834,16 @@ static RCoreHelpMessage help_msg_ah = {
 };
 
 static RCoreHelpMessage help_msg_ahs = {
-	"Usage:", "ahs [size] [@ addr]", " Define opcode size hint",
-	"ahs", " 16", "Hint the analysis to make the instruction 16 bytes in size",
-	"ahs-", "", "Unset the instruction size hint in the current offset",
-	"ahs-", "*", "Unset the instruction size hint in the current offset",
+	"Usage:", "ahs [size] [@ addr]", "define opcode size hint",
+	"ahs", " 16", "hint the analysis to make the instruction 16 bytes in size",
+	"ahs-", "", "unset the instruction size hint in the current offset",
+	"ahs-", "*", "unset the instruction size hint in the current offset",
 	"ahs*", "", "show all the instruction size hints as r2 commands",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_aho = {
-	"Usage:", "aho [optype] [@ addr]", " Define opcode type hint",
+	"Usage:", "aho [optype] [@ addr]", "define opcode type hint",
 	"aho", " nop", "change the opcode type in current address to be considered a NOP",
 	"aho", "", "show the current opcode hint if any",
 	"aho-", "$$", "delete hints in current offset",
@@ -852,7 +852,7 @@ static RCoreHelpMessage help_msg_aho = {
 };
 
 static RCoreHelpMessage help_msg_ahb = {
-	"Usage:", "ahb [8|16|32|64] [@ addr]", " Define asm.bits hint at given address",
+	"Usage:", "ahb [8|16|32|64] [@ addr]", "define asm.bits hint at given address",
 	"ahb", " 16", "set asm.bits=16 in the given address",
 	"ahb", "", "get asm.bits used in given addr (current seek)",
 	"ahb", "-$$", "delete all the hints in the given address",
@@ -861,13 +861,13 @@ static RCoreHelpMessage help_msg_ahb = {
 };
 
 static RCoreHelpMessage help_msg_ahr = {
-	"Usage:", "ahr addr", " Set instruction as return type (similar to 'aho ret'?)",
+	"Usage:", "ahr addr", "set instruction as return type (similar to 'aho ret'?)",
 	"ahr", " $$", "current instruction may be considered as the end of a function",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_ahi = {
-	"Usage:", "ahi [2|8|10|10u|16|bodhipSs] [@ offset]", " Define numeric base",
+	"Usage:", "ahi [2|8|10|10u|16|bodhipSs] [@ offset]", "define numeric base",
 	"ahi", " <base>", "set numeric base (2, 8, 10, 16)",
 	"ahi", " 10|d", "set base to signed decimal (10), sign bit should depend on receiver size",
 	"ahi", " 10u|du", "set base to unsigned decimal (11)",
@@ -927,7 +927,7 @@ static RCoreHelpMessage help_msg_ao = {
 };
 
 static RCoreHelpMessage help_msg_ar = {
-	"Usage: ar", "", "# Analysis Registers",
+	"Usage: ar", "", "# analyze registers",
 	"ar", "", "show 'gpr' registers",
 	"ar.", ">$snapshot", "show r2 commands to set register values to the current state",
 	"ar,", "", "show registers in table format (see dr,)",
@@ -970,7 +970,7 @@ static RCoreHelpMessage help_msg_ara = {
 };
 
 static RCoreHelpMessage help_msg_arw = {
-	"Usage:", "arw ", "# Set contents of the register arena",
+	"Usage:", "arw ", "# set contents of the register arena",
 	"arw", " <hexnum>", "set contents of the register arena",
 	NULL
 };
@@ -989,7 +989,7 @@ static RCoreHelpMessage help_msg_as = {
 };
 
 static RCoreHelpMessage help_msg_av = {
-	"Usage:", "av[?jr*]", " C++ vtables and RTTI",
+	"Usage:", "av[?jr*]", "C++ vtables and RTTI",
 	"av", "", "search for vtables in data sections and show results",
 	"avj", "", "like av, but as json",
 	"av*", "", "like av, but as r2 commands",
@@ -1001,7 +1001,7 @@ static RCoreHelpMessage help_msg_av = {
 };
 
 static RCoreHelpMessage help_msg_ax = {
-	"Usage:", "ax[?d-l*]", " # see also 'afx?'",
+	"Usage:", "ax[?d-l*]", "# see also 'afx?'",
 	"ax", " addr [at]", "add code ref pointing to addr (from curseek)",
 	"ax", "", "list refs",
 	"ax*", "", "output radare commands",
@@ -5662,7 +5662,7 @@ void cmd_anal_reg(RCore *core, const char *str) {
 		case '?': { // "ars?"
 			// TODO #7967 help refactor: dup from drp
 			RCoreHelpMessage help_msg = {
-				"Usage:", "drs", " # Register states commands",
+				"Usage:", "drs", "# register states commands",
 				"drs", "", "list register stack",
 				"drs+", "", "push register state",
 				"drs-", "", "pop register state",

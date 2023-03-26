@@ -7,10 +7,10 @@
 bool ranal2_list(RCore *core, const char *arch, int fmt);
 
 static RCoreHelpMessage help_msg_La = {
-	"Usage:", "La[qj]", " # asm/anal plugin list",
-	"La",  "", "List asm/anal pluginsh (See rasm2 -L)",
-	"Laq",  "", "Only list the plugin name",
-	"Laj",  "", "Full list, but in JSON format",
+	"Usage:", "La[qj]", "# asm/anal plugin list",
+	"La",  "", "list asm/anal pluginsh (See rasm2 -L)",
+	"Laq",  "", "only list the plugin name",
+	"Laj",  "", "full list, but in JSON format",
 	NULL
 };
 

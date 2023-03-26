@@ -3,7 +3,7 @@
 #include "r_core.h"
 
 static RCoreHelpMessage help_message_ci = {
-	"Usage: ci", "[sil] ([obid])", "Compare two bin objects",
+	"Usage: ci", "[sil] ([obid])", "compare two bin objects",
 	"cis", " 0", "compare symbols with current `ob 1` with given obid (0)",
 	"cii", " 0", "compare imports",
 	"cil", " 0", "compare libraries",
@@ -11,14 +11,14 @@ static RCoreHelpMessage help_message_ci = {
 };
 
 static RCoreHelpMessage help_msg_cmp = {
-	"Usage: cmp", " [file] [file]", "Compare two ($alias) files, and change $? value",
+	"Usage: cmp", " [file] [file]", "compare two ($alias) files, and change $? value",
 	"cmp", " ls ls.old", "compare contents of given files",
 	"cmp", " $a $b", "same as above but using alias files",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_c = {
-	"Usage:", "c[?dfx] [argument]", " # Compare",
+	"Usage:", "c[?dfx] [argument]", "# compare",
 	"c", " [string]", "compare a plain with escaped chars string",
 	"c*", " [string]", "same as c, but printing r2 commands instead",
 	"cj", " [string]", "same as c, with JSON output",
@@ -46,12 +46,12 @@ static RCoreHelpMessage help_msg_c = {
 	"cw", "[?][*dqjru] [addr]", "compare memory watchers",
 	"cx", " [hexpair]", "compare hexpair string (use '.' as nibble wildcard)",
 	"cx*", " [hexpair]", "compare hexpair string (output r2 commands)",
-	"cX", " [addr]", "Like 'cc' but using hexdiff output",
+	"cX", " [addr]", "like 'cc' but using hexdiff output",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_cu = {
-	"Usage: cu", " [offset]", "# Prints unified comparison to make hexpatches",
+	"Usage: cu", " [offset]", "# prints unified comparison to make hexpatches",
 	"cu", " $$+1 > p", "compare hexpairs from current seek and +1",
 	"cu1", " $$+1 > p", "compare bytes from current seek and +1",
 	"cu2", " $$+1 > p", "compare words (half, 16bit) from current seek and +1",
@@ -64,7 +64,7 @@ static RCoreHelpMessage help_msg_cu = {
 };
 
 static RCoreHelpMessage help_msg_cg = {
-	"Usage: cg", "", "Graph compare",
+	"Usage: cg", "", "graph compare",
 	"cg", " [file]", "diff ratio among functions (columns: off-A, match-ratio, off-B)",
 	"cgf", " [fcn]", "compare functions (curseek vs fcn)",
 	"cgo", "", "opcode-bytes code graph diff",
@@ -451,13 +451,13 @@ static void nowatchers(ut64 addr) {
 /* Returns 0 if operation succeeded, 1 otherwise */
 static int cmd_cmp_watcher(RCore *core, const char *input) {
 	static RCoreHelpMessage help_msg_cw = {
-		"Usage: cw", "[args]", "Manage compare watchers; See if and how memory changes",
-		"cw??", "", "Show more info about watchers",
-		"cw ", "addr sz cmd", "Add a compare watcher",
-		"cw", "[*qj] [addr]", "Show compare watchers (*=r2 commands, q=quiet, j=json)",
-		"cwd", " [addr]", "Delete watcher",
-		"cwr", " [addr]", "Revert watcher",
-		"cwu", " [addr]", "Update watcher",
+		"Usage: cw", "[args]", "manage compare watchers; See if and how memory changes",
+		"cw??", "", "show more info about watchers",
+		"cw ", "addr sz cmd", "add a compare watcher",
+		"cw", "[*qj] [addr]", "show compare watchers (*=r2 commands, q=quiet, j=json)",
+		"cwd", " [addr]", "delete watcher",
+		"cwr", " [addr]", "revert watcher",
+		"cwu", " [addr]", "update watcher",
 		NULL
 	};
 	static const char *verbose_help_cw =
@@ -724,8 +724,8 @@ static int cmd_cp(void *data, const char *input) {
 	RCore *core = (RCore *)data;
 	bool use_corefile;
 	RCoreHelpMessage help_msg_cp = {
-		"cp", " src dst", "Standard file copy",
-		"cp", ".[ext]", "Copy current file <name> to <name>.ext",
+		"cp", " src dst", "standard file copy",
+		"cp", ".[ext]", "copy current file <name> to <name>.ext",
 		NULL
 	};
 

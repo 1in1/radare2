@@ -4,7 +4,7 @@
 #include "../bin/format/pdb/pdb_downloader.h"
 
 static RCoreHelpMessage help_msg_i = {
-	"Usage: i", "", "Get info from opened file (see rabin2's manpage)",
+	"Usage: i", "", "get info from opened file (see rabin2's manpage)",
 	"Output mode:", "", "",
 	"'*'", "", "output in radare commands",
 	"'j'", "", "output in json",
@@ -14,14 +14,14 @@ static RCoreHelpMessage help_msg_i = {
 	"iA", "", "list archs",
 	"ia", "", "show all info (imports, exports, sections..)",
 	"ib", "", "reload the current buffer for setting of the bin (use once only)",
-	"ic", "", "List classes, methods and fields (icj for json)",
+	"ic", "", "list classes, methods and fields (icj for json)",
 	"ic.", "", "show class and method name in current seek",
-	"icc", "", "List classes, methods and fields in Header Format",
-	"icg", " [str]", "List classes as agn/age commands to create class hierarchy graphs (matches str if provided)",
-	"icq", "", "List classes, in quiet mode (just the classname)",
-	"icqq", "", "List classes, in quieter mode (only show non-system classnames)",
-	"icl", "", "Show addresses of class and it methods, without names",
-	"ics", "", "Show class symbols in an easy to parse format",
+	"icc", "", "list classes, methods and fields in Header Format",
+	"icg", " [str]", "list classes as agn/age commands to create class hierarchy graphs (matches str if provided)",
+	"icq", "", "list classes, in quiet mode (just the classname)",
+	"icqq", "", "list classes, in quieter mode (only show non-system classnames)",
+	"icl", "", "show addresses of class and it methods, without names",
+	"ics", "", "show class symbols in an easy to parse format",
 	"iC", "[j]", "show signature info (entitlements, ...)",
 	"id", "[?]", "show DWARF source lines information",
 	"iD", " lang sym", "demangle symbolname for given language",
@@ -67,7 +67,7 @@ static RCoreHelpMessage help_msg_i = {
 
 // TODO: this command needs a refactoring
 static RCoreHelpMessage help_msg_id = {
-	"Usage: idp", "", "Debug information",
+	"Usage: idp", "", "debug information",
 	"id", "", "show DWARF source lines information",
 	"idp", " [file.pdb]", "load pdb file information",
 	"idpi", " [file.pdb]", "show pdb file information",

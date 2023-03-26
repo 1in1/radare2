@@ -9,7 +9,7 @@
 static int printzoomcallback(void *user, int mode, ut64 addr, ut8 *bufz, ut64 size);
 
 static RCoreHelpMessage help_msg_pa = {
-	"Usage: pa[edD]", "[asm|hex]", "Print (dis)assembly",
+	"Usage: pa[edD]", "[asm|hex]", "print (dis)assembly",
 	"pa", " [assembly]", "print hexpairs of the given assembly expression",
 	"paD", " [hexpairs]", "print assembly expression from hexpairs and show hexpairs",
 	"pad", " [hexpairs]", "print assembly expression from hexpairs (alias for pdx, pix)",
@@ -19,7 +19,7 @@ static RCoreHelpMessage help_msg_pa = {
 };
 
 static RCoreHelpMessage help_msg_psz = {
-	"Usage: psz[jl]", "", "Print zero-terminated string",
+	"Usage: psz[jl]", "", "print zero-terminated string",
 	"psz", "", "print zero-terminated string",
 	"psz*", "", "r2 command to write the null-terminated string in here",
 	"pszj", "", "print zero-terminated string as json",
@@ -38,7 +38,7 @@ static RCoreHelpMessage help_msg_p8 = {
 };
 
 static RCoreHelpMessage help_msg_pm = {
-	"Usage: pm", "[file|directory]", "Set libmagic reference file or directory (see /m?)",
+	"Usage: pm", "[file|directory]", "set libmagic reference file or directory (see /m?)",
 	"pm", " [file|directory]", "set libmagic reference (see /m?)",
 	"e", " dir.magic", "defaults to " R_JOIN_2_PATHS (R2_PREFIX, R2_SDB_MAGIC),
 	NULL
@@ -59,7 +59,7 @@ static RCoreHelpMessage help_msg_pp = {
 };
 
 static RCoreHelpMessage help_msg_pc = {
-	"Usage:", "pc", " # Print in code",
+	"Usage:", "pc", "# print in code",
 	"pc",  "", "C",
 	"pc*", "", "print 'wx' r2 commands",
 	"pcA", "", ".bytes with instructions in comments",
@@ -106,7 +106,7 @@ static RCoreHelpMessage help_msg_pF = {
 	"pFB", "[j] [len]", "decode iOS Binary PLIST from current block",
 	"pFo", "[j] [len]", "decode ASN1 OID",
 	"pFp", "[j] [len]", "decode PKCS7",
-	"pFx", "[j] [len]", "Same with X509",
+	"pFx", "[j] [len]", "same with X509",
 	"pFX", " [len]", "print decompressed xz block",
 	NULL
 };
@@ -133,7 +133,7 @@ static RCoreHelpMessage help_msg_prg = {
 };
 
 static RCoreHelpMessage help_msg_amper = {
-	"Usage:", "&[-|<cmd>]", "Manage tasks (WARNING: Experimental. Use with caution!)",
+	"Usage:", "&[-|<cmd>]", "manage tasks (WARNING: Experimental. Use with caution!)",
 	"&", " <cmd>", "run <cmd> in a new background task",
 	"&:", "<cmd>", "queue <cmd> to be executed later when possible",
 	"&t", " <cmd>", "run <cmd> in a new transient background task (auto-delete when it is finished)",
@@ -257,9 +257,9 @@ static RCoreHelpMessage help_msg_p_minus = {
 };
 
 static RCoreHelpMessage help_msg_pd = {
-	"Usage:", "p[dD][ajbrfils] [[-]len]", " # Print N bytes/instructions bw/forward",
+	"Usage:", "p[dD][ajbrfils] [[-]len]", "# print N bytes/instructions bw/forward",
 	"NOTE: ", "len", "parameter can be negative",
-	"NOTE: ", "", "Pressing ENTER on empty command will repeat last print command in next page",
+	"NOTE: ", "", "pressing ENTER on empty command will repeat last print command in next page",
 	"pD", " N", "disassemble N bytes",
 	"pd", " -N", "disassemble N instructions backwards",
 	"pd", " N", "disassemble N instructions",
@@ -290,7 +290,7 @@ static RCoreHelpMessage help_msg_pd = {
 };
 
 static RCoreHelpMessage help_msg_pde = {
-	"Usage:", "pde[q|qq|j] [N]", "Disassemble N instructions following execution flow from current PC",
+	"Usage:", "pde[q|qq|j] [N]", "disassemble N instructions following execution flow from current PC",
 	"pde", "", "disassemble N instructions following execution flow from current PC",
 	"pdeq", "", "disassemble N instructions following execution flow from current PC (like pdi)",
 	"pdeqq", "", "disassemble N instructions following execution flow from current PC (like pi)",
@@ -309,7 +309,7 @@ static RCoreHelpMessage help_msg_ph = {
 };
 
 static RCoreHelpMessage help_msg_pdu = {
-	"Usage:", "pdu[acios][j]", "Disassemble instructions until condition",
+	"Usage:", "pdu[acios][j]", "disassemble instructions until condition",
 	"pdua", "[j] [addr]", "disassemble until address",
 	"pduc", "[j]", "disassemble until call",
 	//"pdue", "[j] [expr]", "disassemble until esil expression",
@@ -432,7 +432,7 @@ static RCoreHelpMessage help_msg_pi = {
 };
 
 static RCoreHelpMessage help_msg_pie = {
-	"Usage:", "pie[fq]", " # print esil of N instructions",
+	"Usage:", "pie[fq]", "# print esil of N instructions",
 	"pie", "", "print esil of N instructions",
 	"pieb", "", "alias for `pie $Fi`",
 	"pieq", "", "same as above but hiding the offset",
@@ -443,7 +443,7 @@ static RCoreHelpMessage help_msg_pie = {
 };
 
 static RCoreHelpMessage help_msg_pif = {
-	"Usage:", "pif[cj]", " # print instructions from function",
+	"Usage:", "pif[cj]", "# print instructions from function",
 	"pif", "", "print function instructions",
 	"pifj", "", "same as above but in JSON format",
 	"pifc", "", "print all calls from this function", // pif~call?
@@ -476,7 +476,7 @@ static RCoreHelpMessage help_msg_pq = {
 };
 
 static RCoreHelpMessage help_msg_ps = {
-	"Usage:", "ps[abijqpsuwWxz+] [N]", "Print String",
+	"Usage:", "ps[abijqpsuwWxz+] [N]", "print String",
 	"ps", "", "print string",
 	"ps+", "[j]", "print libc++ std::string (same-endian, ascii, zero-terminated)",
 	"psa", "", "print any type of string (psp/psw/psW/psz/..)",
@@ -506,7 +506,7 @@ static RCoreHelpMessage help_msg_pt = {
 };
 
 static RCoreHelpMessage help_msg_pv = {
-	"Usage: pv[1248z][j]", "", "Print value(s) given size and endian",
+	"Usage: pv[1248z][j]", "", "print value(s) given size and endian",
 	"pv", "", "print bytes based on asm.bits",
 	"pv1", "", "print 1 byte in memory",
 	"pv2", "", "print 2 bytes in memory",
@@ -519,7 +519,7 @@ static RCoreHelpMessage help_msg_pv = {
 };
 
 static RCoreHelpMessage help_msg_px = {
-	"Usage:", "px[0afoswqWqQ][f]", " # Print heXadecimal",
+	"Usage:", "px[0afoswqWqQ][f]", "# print heXadecimal",
 	"px", "", "show hexdump",
 	"px--", "[n]", "context hexdump (the hexdump version of pd--3)",
 	"px/", "", "same as x/ in gdb (help x)",

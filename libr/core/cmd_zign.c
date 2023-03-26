@@ -3,7 +3,7 @@
 #include <r_core.h>
 
 static RCoreHelpMessage help_msg_z = {
-	"Usage:", "z[*j-aof/cs] [args] ", "# Manage zignatures",
+	"Usage:", "z[*j-aof/cs] [args] ", "# manage zignatures",
 	"z", "", "show zignatures",
 	"z.", "", "find matching zignatures in current offset",
 	"zb", "[?][n=5]", "search for best match",
@@ -33,7 +33,7 @@ static RCoreHelpMessage help_msg_zb = {
 };
 
 static RCoreHelpMessage help_msg_z_slash = {
-	"Usage:", "z/[f*] ", "# Search signatures (see 'e?search' for options)",
+	"Usage:", "z/[f*] ", "# search signatures (see 'e?search' for options)",
 	"z/ ", "", "search zignatures on range and flag matches",
 	"z/f ", "", "zignature search on known functions",
 	"z/* ", "", "search zignatures on range and output radare commands",
@@ -41,18 +41,18 @@ static RCoreHelpMessage help_msg_z_slash = {
 };
 
 static RCoreHelpMessage help_msg_za = {
-	"Usage:", "za[fFM?] [args] ", "# Add zignature",
+	"Usage:", "za[fFM?] [args] ", "# add zignature",
 	"za ", "zigname type params", "add zignature",
-	"zac ", "", "Compute collisions between signatures",
+	"zac ", "", "compute collisions between signatures",
 	"zaf ", "[fcnname] [zigname]", "create zignature for function",
 	"zaF ", "", "generate zignatures for all functions",
-	"zaM ", "", "Same as zaF but merge signatures of same name",
+	"zaM ", "", "same as zaF but merge signatures of same name",
 	"za?? ", "", "show extended help",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_zf = {
-	"Usage:", "zf[dsz] filename ", "# Manage FLIRT signatures",
+	"Usage:", "zf[dsz] filename ", "# manage FLIRT signatures",
 	"zfd ", "filename", "open FLIRT file and dump",
 	"zfs ", "filename", "open FLIRT file and scan",
 	"zfs ", "/path/**.sig", "recursively search for FLIRT files and scan them (see dir.depth)",
@@ -61,7 +61,7 @@ static RCoreHelpMessage help_msg_zf = {
 };
 
 static RCoreHelpMessage help_msg_zo = {
-	"Usage:", "zo[zs] filename ", "# Manage zignature files (see dir.zigns)",
+	"Usage:", "zo[zs] filename ", "# manage zignature files (see dir.zigns)",
 	"zo ", "filename", "load zinatures from sdb file",
 	"zoz ", "filename", "load zinatures from gzipped sdb file",
 	"zos ", "filename", "save zignatures to sdb file (merge if file exists)",
@@ -69,7 +69,7 @@ static RCoreHelpMessage help_msg_zo = {
 };
 
 static RCoreHelpMessage help_msg_zs = {
-	"Usage:", "zs[+-*] [namespace] ", "# Manage zignspaces",
+	"Usage:", "zs[+-*] [namespace] ", "# manage zignspaces",
 	"zs", "", "display zignspaces",
 	"zs ", "zignspace", "select zignspace",
 	"zs ", "*", "select all zignspaces",
@@ -82,7 +82,7 @@ static RCoreHelpMessage help_msg_zs = {
 };
 
 static RCoreHelpMessage help_msg_zc = {
-	"Usage:", "zc[n!] other_space ", "# Compare zignspaces, match >= threshold (e zign.diff.*)",
+	"Usage:", "zc[n!] other_space ", "# compare zignspaces, match >= threshold (e zign.diff.*)",
 	"zc", " other_space", "compare all current space with other_space",
 	"zcn", " other_space", "compare current space with zigns with same name on other_space",
 	"zcn!", " other_space", "same as above but show the ones not matching",

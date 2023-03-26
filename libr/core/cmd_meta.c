@@ -11,7 +11,7 @@ static R_TH_LOCAL size_t filter_count = 0;
 static R_TH_LOCAL Sdb *fscache = NULL;
 
 static RCoreHelpMessage help_msg_C = {
-	"Usage:", "C[-LCvsdfm*?][*?] [...]", " # Metadata management",
+	"Usage:", "C[-LCvsdfm*?][*?] [...]", "# metadata management",
 	"C", "", "list meta info in human friendly form",
 	"C*", "", "list meta info in r2 commands",
 	"C*.", "", "list meta info of current offset in r2 commands",
@@ -75,7 +75,7 @@ static RCoreHelpMessage help_msg_CL = {
 };
 
 static RCoreHelpMessage help_msg_Ct = {
-	"Usage: Ct", "[.|-] [@ addr]", " # Manage comments for variable types",
+	"Usage: Ct", "[.|-] [@ addr]", "# manage comments for variable types",
 	"Ct", "", "list all variable type comments",
 	"Ct", " comment-text [@ addr]", "place comment at current or specified address",
 	"Ct.", " [@ addr]", "show comment at current or specified address",
@@ -84,7 +84,7 @@ static RCoreHelpMessage help_msg_Ct = {
 };
 
 static RCoreHelpMessage help_msg_CS = {
-	"Usage: CS","[*] [+-][metaspace|addr]", " # Manage metaspaces",
+	"Usage: CS","[*] [+-][metaspace|addr]", "# manage metaspaces",
 	"CS","","display metaspaces",
 	"CS"," *","select all metaspaces",
 	"CS"," metaspace","select metaspace or create if it doesn't exist",

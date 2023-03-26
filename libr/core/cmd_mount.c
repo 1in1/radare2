@@ -1,7 +1,7 @@
 /* radare - LGPL - Copyright 2009-2022 // pancake */
 
 static RCoreHelpMessage help_msg_m = {
-	"Usage:", "m[-?*dgy] [...] ", "Mountpoints management",
+	"Usage:", "m[-?*dgy] [...] ", "mountpoints management",
 	"m", " /mnt ext2 0", "mount ext2 fs at /mnt with delta 0 on IO",
 	"m", " /mnt", "mount fs at /mnt with autodetect fs and current offset",
 	"m", "", "list all mountpoints in human readable format",

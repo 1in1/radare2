@@ -137,7 +137,7 @@ static RCoreHelpMessage help_msg_wp = {
 };
 
 static RCoreHelpMessage help_msg_wt = {
-	"Usage:", "wt[afs] [filename] [size]", " Write current block or [size] bytes from offset to file",
+	"Usage:", "wt[afs] [filename] [size]", "write current block or [size] bytes from offset to file",
 	"wta", " [filename]", "append to 'filename'",
 	"wtf", " [filename] [size]", "write to file (see also 'wxf' and 'wf?')",
 	"wtf!", " [filename]", "write to file from current address to eof (ignores given size)",
@@ -148,7 +148,7 @@ static RCoreHelpMessage help_msg_wt = {
 };
 
 static RCoreHelpMessage help_msg_wf = {
-	"Usage:", "wf[fs] [-|args ..]", " Write from (file, swap, offset)",
+	"Usage:", "wf[fs] [-|args ..]", "write from (file, swap, offset)",
 	"wf", " 10 20", "write 20 bytes from offset 10 into current seek",
 	"wff", " file [len]", "write contents of file into current offset",
 	"wfs", " host:port [len]", "write from socket (tcp listen in port for N bytes)",
@@ -157,7 +157,7 @@ static RCoreHelpMessage help_msg_wf = {
 };
 
 static RCoreHelpMessage help_msg_wv = {
-	"Usage:", "wv[size] [value]", " Write value of given size",
+	"Usage:", "wv[size] [value]", "write value of given size",
 	"wv", " 0x834002", "write dword with this value",
 	"wv1", " 234", "write one byte with this value",
 	"wv2", " 234", "write unsigned short (2 bytes) with this number",

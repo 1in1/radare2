@@ -21,7 +21,7 @@
 void cmd_anal_reg (RCore *core, const char *str);
 
 static RCoreHelpMessage help_msg_d = {
-	"Usage:", "d", " # Debug commands",
+	"Usage:", "d", "# debug commands",
 	"d:", "[?] [cmd]", "run custom debug plugin command",
 	"db", "[?]", "breakpoints commands",
 	"dbt", "[?]", "display backtrace based on dbg.btdepth and dbg.btalgo",
@@ -54,10 +54,10 @@ static RCoreHelpMessage help_msg_d = {
 };
 
 static RCoreHelpMessage help_msg_db = {
-	"Usage: db", "", " # Breakpoints commands",
+	"Usage: db", "", "# breakpoints commands",
 	"db", "", "list breakpoints",
 	"db*", "", "list breakpoints in r commands",
-	"db", " sym.main", "add breakpoint into sym.main",
+	"db", "sym.main", "add breakpoint into sym.main",
 	"db", " <addr>", "add breakpoint",
 	"dbH", " <addr>", "add hardware breakpoint",
 	"db-", " <addr>", "remove breakpoint",
@@ -102,7 +102,7 @@ static RCoreHelpMessage help_msg_db = {
 };
 
 static RCoreHelpMessage help_msg_dbt = {
-	"Usage: dbt", "", " # Backtrace commands",
+	"Usage: dbt", "", "# backtrace commands",
 	"dbt", "", "display backtrace based on dbg.btdepth and dbg.btalgo",
 	"dbt*", "", "display backtrace in flags",
 	"dbt=", "", "display backtrace in one line (see dbt=s and dbt=b for sp or bp)",
@@ -116,19 +116,19 @@ static RCoreHelpMessage help_msg_dbt = {
 };
 
 static RCoreHelpMessage help_msg_drr = {
-	"Usage: drr", ""," # Show references to registers (see pxr?)",
+	"Usage: drr", "","# show references to registers (see pxr?)",
 	"drr", "", "periscope register values",
 	"drrj", "", "same, but output in JSON",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_dbw = {
-	"Usage: dbw", "<addr> <r/w/rw>"," # Add watchpoint",
+	"Usage: dbw", "<addr> <r/w/rw>","# add watchpoint",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_dc = {
-	"Usage: dc", "", "Execution continuation commands",
+	"Usage: dc", "", "execution continuation commands",
 	"dc", "", "continue execution of all children",
 	"dc", " <pid>", "continue execution of pid",
 	"dc", "[-pid]", "stop execution of pid",
@@ -152,7 +152,7 @@ static RCoreHelpMessage help_msg_dc = {
 };
 
 static RCoreHelpMessage help_msg_dcs = {
-	"Usage:", "dcs", " Continue until syscall",
+	"Usage:", "dcs", "continue until syscall",
 	"dcs", "", "continue until next syscall",
 	"dcs [str]", "", "continue until next call to the 'str' syscall",
 	"dcs", "*", "trace all syscalls, a la strace",
@@ -160,7 +160,7 @@ static RCoreHelpMessage help_msg_dcs = {
 };
 
 static RCoreHelpMessage help_msg_dcu = {
-	"Usage:", "dcu", " Continue until address",
+	"Usage:", "dcu", "continue until address",
 	"dcu.", "", "alias for dcu $$ (continue until current address)",
 	"dcu", " address", "continue until address",
 	"dcu", " [..tail]", "continue until the range",
@@ -169,7 +169,7 @@ static RCoreHelpMessage help_msg_dcu = {
 };
 
 static RCoreHelpMessage help_msg_dd = {
-	"Usage: dd", "", "Manage file descriptors for child process (* to show r2 commands)",
+	"Usage: dd", "", "manage file descriptors for child process (* to show r2 commands)",
 	"dd", "[*]", "list file descriptors",
 	"dd", "[*] <file|addr>", "open file as read-only (r--); addr = use as char* for path",
 	"dd+", "[*] <file|addr>", "open/create file as read-write (rw-); addr = use as char* for path",
@@ -202,7 +202,7 @@ static RCoreHelpMessage help_msg_des = {
 };
 
 static RCoreHelpMessage help_msg_di = {
-	"Usage: di", "", "Debugger target information",
+	"Usage: di", "", "debugger target information",
 	"di", "", "show debugger target information",
 	"di*", "", "same as above, but in r2 commands",
 	"dir", "", "alias for 'ls'",
@@ -213,7 +213,7 @@ static RCoreHelpMessage help_msg_di = {
 };
 
 static RCoreHelpMessage help_msg_dk = {
-	"Usage: dk", "", "Signal commands",
+	"Usage: dk", "", "signal commands",
 	"dk", "", "list all signal handlers of child process",
 	"dk", " <signal>", "send KILL signal to child",
 	"dk", " <signal>=1", "set signal handler for <signal> in child",
@@ -225,7 +225,7 @@ static RCoreHelpMessage help_msg_dk = {
 };
 
 static RCoreHelpMessage help_msg_dko = {
-	"Usage:", "dko", " # Signal handling commands",
+	"Usage:", "dko", "# signal handling commands",
 	"dko", "", "list existing signal handling",
 	"dko", " [signal]", "clear handling for a signal",
 	"dko", " [signal] [skip|cont]", "set handling for a signal",
@@ -233,7 +233,7 @@ static RCoreHelpMessage help_msg_dko = {
 };
 
 static RCoreHelpMessage help_msg_dm = {
-	"Usage:", "dm", " # Memory maps commands",
+	"Usage:", "dm", "# memory maps commands",
 	"dm", "", "list memory maps of target process",
 	"dm", " address size", "allocate <size> bytes at <address> (anywhere if address is -1) in child process",
 	"dm=", "", "list memory maps of target process (ascii-art bars)",
@@ -252,7 +252,7 @@ static RCoreHelpMessage help_msg_dm = {
 	"dmm", "[?][j*]", "list modules (libraries, binaries loaded in memory)",
 	"dmp", "[?] <address> <size> <perms>", "change page at <address> with <size>, protection <perms> (perm)",
 	"dms", "[?] <id> <mapaddr>", "take memory snapshot",
-	"dms-", " <id> <mapaddr>", "Restore memory snapshot",
+	"dms-", " <id> <mapaddr>", "restore memory snapshot",
 	"dmS", " [addr|libname] [sectname]", "list sections of target lib",
 	"dmS*", " [addr|libname] [sectname]", "list sections of target lib in radare commands",
 	"dmL", " address size", "allocate <size> bytes at <address> and promote to huge page",
@@ -262,7 +262,7 @@ static RCoreHelpMessage help_msg_dm = {
 };
 
 static RCoreHelpMessage help_msg_dmi = {
-	"Usage: dmi", "", " # List/load Symbols",
+	"Usage: dmi", "", "# list/load Symbols",
 	"dmi", "[j|q|*] [libname] [symname]", "list symbols of target lib",
 	"dmia", "[j|q|*] [libname]", "list all info of target lib",
 	"dmi*", "", "list symbols of target lib in radare commands",
@@ -272,7 +272,7 @@ static RCoreHelpMessage help_msg_dmi = {
 };
 
 static RCoreHelpMessage help_msg_dmm = {
-	"Usage:", "dmm", " # Module memory maps commands",
+	"Usage:", "dmm", "# module memory maps commands",
 	"dmm", "", "list modules of target process",
 	"dmm*", "", "list modules of target process (r2 commands)",
 	"dmm.", "", "list memory map of current module",
@@ -281,7 +281,7 @@ static RCoreHelpMessage help_msg_dmm = {
 };
 
 static RCoreHelpMessage help_msg_dms = {
-	"Usage:", "dms", " # Memory map snapshots",
+	"Usage:", "dms", "# memory map snapshots",
 	"dms", "", "list memory snapshots",
 	"dms", " addr", "take snapshot with given id of map at address",
 	"dms", "-id", "delete memory snapshot",
@@ -298,32 +298,32 @@ static RCoreHelpMessage help_msg_dms = {
 };
 
 static RCoreHelpMessage help_msg_dxe = {
-	"Usage:", "dxe", " egg-program # see ragg2 and the 'g' command for more details",
+	"Usage:", "dxe", "egg-program # see ragg2 and the 'g' command for more details",
 	"dxe", " sym.imp.puts(\"foo\")", "call puts with a string argument",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_dmp = {
-	"Usage:", "dmp", " Change page permissions",
+	"Usage:", "dmp", "change page permissions",
 	"dmp", " [addr] [size] [perms]", "change permissions",
 	"dmp", " [perms]", "change dbg.map permissions",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_do = {
-	"Usage:", "do", " # Debug (re)open commands",
+	"Usage:", "do", "# debug (re)open commands",
 	"do", "", "open process (reload, alias for 'oo')",
 	"dor", " [rarun2]", "comma separated list of k=v rarun2 profile options (e dbg.profile)",
 	"doe", "", "show rarun2 startup profile",
 	"doe!", "", "edit rarun2 startup profile with $EDITOR",
-	"doo", " [args]", "Reopen in debug mode with args (alias for 'ood')",
-	"doof", " [args]", "Reopen in debug mode from file (alias for 'oodf')",
+	"doo", " [args]", "reopen in debug mode with args (alias for 'ood')",
+	"doof", " [args]", "reopen in debug mode from file (alias for 'oodf')",
 	"doc", "", "close debug session",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_dp = {
-	"Usage:", "dp", " # Process commands",
+	"Usage:", "dp", "# process commands",
 	"dp", "", "list current pid and children",
 	"dp", " <pid>", "list children of pid",
 	"dpj", " <pid>", "list children of pid in JSON format",
@@ -349,7 +349,7 @@ static RCoreHelpMessage help_msg_dp = {
 };
 
 static RCoreHelpMessage help_msg_dr = {
-	"Usage: dr", "", "Registers commands",
+	"Usage: dr", "", "registers commands",
 	"dr", "", "show 'gpr' registers",
 	"dr", " <register>=<val>", "set register value",
 	"dr.", " >$snapshot", "capture current register values in r2 alias file",
@@ -383,7 +383,7 @@ static RCoreHelpMessage help_msg_dr = {
 };
 
 static RCoreHelpMessage help_msg_drp = {
-	"Usage:", "drp", " # Register profile commands",
+	"Usage:", "drp", "# register profile commands",
 	"drp", "", "show the current register profile",
 	"drp", " [regprofile-file]", "set the current register profile",
 	"drp", " [gdb] [regprofile-file]", "parse gdb register profile and dump an r2 profile string",
@@ -421,7 +421,7 @@ static RCoreHelpMessage help_msg_drt = {
 };
 
 static RCoreHelpMessage help_msg_drx = {
-	"Usage: drx", "", "Hardware breakpoints commands",
+	"Usage: drx", "", "hardware breakpoints commands",
 	"drx", "", "list all (x86?) hardware breakpoints",
 	"drx", " <number> <address> <length> <perms>", "modify hardware breakpoint",
 	"drx-", "<number>", "clear hardware breakpoint",
@@ -429,7 +429,7 @@ static RCoreHelpMessage help_msg_drx = {
 };
 
 static RCoreHelpMessage help_msg_drv = {
-	"Usage: drv", " [reg] [idx] [wordsize] [= value]", "Show multimedia packed registers",
+	"Usage: drv", " [reg] [idx] [wordsize] [= value]", "show multimedia packed registers",
 	"drv", "", "show XMM registers",
 	"drv", " xmm0", "show all packings of xmm0",
 	"drv", " xmm0 0 32 = 12", "set the first 32 bit word of the xmm0 reg to 12",
@@ -451,7 +451,7 @@ static RCoreHelpMessage help_msg_drv = {
 };
 
 static RCoreHelpMessage help_msg_ds = {
-	"Usage: ds", "", "Step commands",
+	"Usage: ds", "", "step commands",
 	"ds", "", "step one instruction",
 	"ds", " <num>", "step <num> instructions",
 	"dsb", "", "step back one instruction",
@@ -467,7 +467,7 @@ static RCoreHelpMessage help_msg_ds = {
 };
 
 static RCoreHelpMessage help_msg_dsu = {
-	"Usage: dsu", "", "Step until commands",
+	"Usage: dsu", "", "step until commands",
 	"dsu ", "<address>", "step until <address>",
 	"dsui", " <instr>", "step until an instruction disasm matches",
 	"dsuir", " <regex>", "like dsui, but using a regexp",
@@ -478,10 +478,10 @@ static RCoreHelpMessage help_msg_dsu = {
 };
 
 static RCoreHelpMessage help_msg_dt = {
-	"Usage: dt", "", "Trace commands",
+	"Usage: dt", "", "trace commands",
 	"dt", "", "list all traces ",
 	"dt", " [addr]", "show trace info at address",
-	"dt%", "", "TODO",
+	"dt%", "", "tODO",
 	"dt*", "", "list all traced opcode offsets",
 	"dt+"," [addr] [times]", "add trace for address N times",
 	"dt-", "", "reset traces (instruction/calls)",
@@ -499,7 +499,7 @@ static RCoreHelpMessage help_msg_dt = {
 };
 
 static RCoreHelpMessage help_msg_dte = {
-	"Usage: dte", "", "Show esil trace logs",
+	"Usage: dte", "", "show esil trace logs",
 	"dte", "", "esil trace log for a single instruction",
 	"dte", " [idx]", "show commands for that index log",
 	"dte", "-*", "delete all esil traces",
@@ -509,7 +509,7 @@ static RCoreHelpMessage help_msg_dte = {
 };
 
 static RCoreHelpMessage help_msg_dts = {
-	"Usage:", "dts[*]", "Trace sessions",
+	"Usage:", "dts[*]", "trace sessions",
 	"dts+", "", "start trace session",
 	"dts-", "", "stop trace session",
 	"dtst", " [dir] ", "save trace sessions to disk",
@@ -519,7 +519,7 @@ static RCoreHelpMessage help_msg_dts = {
 };
 
 static RCoreHelpMessage help_msg_dx = {
-	"Usage: dx", "[aers]", " Debug execution commands",
+	"Usage: dx", "[aers]", "debug execution commands",
 	"dx", " <hexpairs>", "execute opcodes",
 	"dxa", " <asm>", "assemble code and execute",
 	"dxe", "[?] <egg-expr>", "compile egg expression and execute it",
@@ -529,12 +529,12 @@ static RCoreHelpMessage help_msg_dx = {
 	"\nExamples:", "", "",
 	"dx", " 9090", "execute two x86 nops",
 	"\"dxa mov eax,6;mov ebx,0;\"", "", "assemble and execute",
-	"dxs", " write 1, 0x8048, 12", "write 12 bytes from 0x8048 into stdout",
+	"dxs", "write 1, 0x8048, 12", "write 12 bytes from 0x8048 into stdout",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_dL = {
-	"Usage: dL", "", " List or set debugger handler",
+	"Usage: dL", "", "list or set debugger handler",
 	"dL", "", "list debugger handlers",
 	"dLq", "", "list debugger handlers in quiet mode",
 	"dLj", "", "list debugger handlers in json mode",

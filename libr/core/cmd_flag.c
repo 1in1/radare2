@@ -4,13 +4,13 @@
 #include "r_core.h"
 
 static RCoreHelpMessage help_msg_fR = {
-	"Usage: fR"," [from] [to] ([mask])", " # Relocate flags matching a mask asuming old and new base addresses",
+	"Usage: fR"," [from] [to] ([mask])", "# relocate flags matching a mask asuming old and new base addresses",
 	"fR", " entry0 `dm~:1[1]`", "rebase entrypoint",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_fV = {
-	"Usage: fV","[*-] [nkey] [offset", " # dump/restore visual marks (mK/'K)",
+	"Usage: fV","[*-] [nkey] [offset", "# dump/restore visual marks (mK/'K)",
 	"fV", " a 33", "set visual mark 'a' to the offset 33",
 	"fV", "-", "delete all visual marks",
 	"fV", "*", "dump visual marks as r2 commands",
@@ -19,7 +19,7 @@ static RCoreHelpMessage help_msg_fV = {
 };
 
 static RCoreHelpMessage help_msg_f = {
-	"Usage: f","[?] [flagname]", " # Manage offset-name flags",
+	"Usage: f","[?] [flagname]", "# manage offset-name flags",
 	"f","","list flags (will only list flags from selected flagspaces)",
 	"f?","flagname","check if flag exists or not, See ?? and ?!",
 	"f."," [*[*]]","list local per-function flags (*) as r2 commands",
@@ -71,7 +71,7 @@ static RCoreHelpMessage help_msg_f = {
 };
 
 static RCoreHelpMessage help_msg_fc = {
-	"Usage: fc", "<flagname> [color]", " # List colors with 'ecs'",
+	"Usage: fc", "<flagname> [color]", "# list colors with 'ecs'",
 	"fc", "", "same as fc.",
 	"fc", " color", "set color to all flags in current offset",
 	"fc", " flag=color", "set color to given flag. Same as 'fc color@flag'",
@@ -85,13 +85,13 @@ static RCoreHelpMessage help_msg_fc = {
 };
 
 static RCoreHelpMessage help_msg_feq = {
-	"Usage: f="," [glob]", " # Grep flag names using glob expression",
+	"Usage: f="," [glob]", "# grep flag names using glob expression",
 	"f=", " str*", "filter all flags starting with str",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_ft = {
-	"Usage: ft","[?ln] ([k] [v ...])", "# Grep flag names using glob expression",
+	"Usage: ft","[?ln] ([k] [v ...])", "# grep flag names using glob expression",
 	"ft"," tag strcpy strlen ...","set words for the 'string' tag",
 	"ft"," tag","get offsets of all matching flags",
 	"ft","","list all tags",
@@ -103,7 +103,7 @@ static RCoreHelpMessage help_msg_ft = {
 };
 
 static RCoreHelpMessage help_msg_fd = {
-	"Usage: fd[d]", " [offset|flag|expression]", " # Describe flags",
+	"Usage: fd[d]", " [offset|flag|expression]", "# describe flags",
 	"fd", " $$" , "# describe flag + delta for given offset",
  	"fd.", " $$", "# check flags in current address (no delta)",
 	"fdd", " $$", "# describe flag without space restrictions",
@@ -112,7 +112,7 @@ static RCoreHelpMessage help_msg_fd = {
 };
 
 static RCoreHelpMessage help_msg_fs = {
-	"Usage: fs","[*] [+-][flagspace|addr]", " # Manage flagspaces",
+	"Usage: fs","[*] [+-][flagspace|addr]", "# manage flagspaces",
 	"fs","","display flagspaces",
 	"fs*","","display flagspaces as r2 commands",
 	"fsj","","display flagspaces in JSON",
@@ -133,7 +133,7 @@ static RCoreHelpMessage help_msg_fs = {
 };
 
 static RCoreHelpMessage help_msg_fz = {
-	"Usage: f", "[?|-name| name] [@addr]", " # Manage flagzones",
+	"Usage: f", "[?|-name| name] [@addr]", "# manage flagzones",
 	"fz", " math", "add new flagzone named 'math'",
 	"fz-", "math", "remove the math flagzone",
 	"fz-", "*", "remove all flagzones",

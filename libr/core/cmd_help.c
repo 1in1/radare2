@@ -67,7 +67,7 @@ static RCoreHelpMessage help_msg_at = {
 };
 
 static RCoreHelpMessage help_msg_at_at = {
-	"@@", "", " # foreach iterator command:",
+	"@@", "", "# foreach iterator command:",
 	"x", " @@ sym.*", "run 'x' over all flags matching 'sym.' in current flagspace",
 	"x", " @@.file", "run 'x' over the offsets specified in the file (one offset per line)",
 	"x", " @@/x 9090", "temporary set cmd.hit to run a command on each search result",
@@ -88,7 +88,7 @@ static RCoreHelpMessage help_msg_at_at = {
 };
 
 static RCoreHelpMessage help_msg_at_at_at = {
-	"@@@", "", " # foreach offset+size iterator command:",
+	"@@@", "", "# foreach offset+size iterator command:",
 	"x", " @@@=", "[addr] [size] ([addr] [size] ...)",
 	"x", " @@@C:cmd", "comments matching",
 	"x", " @@@E", "exports",
@@ -98,7 +98,7 @@ static RCoreHelpMessage help_msg_at_at_at = {
 	"x", " @@@S", "sections",
 	"x", " @@@SS", "segments (same as @@@G)",
 	"x", " @@@b", "basic blocks of current function",
-	"x", " @@@c:cmd", "Same as @@@=`cmd`, without the backticks",
+	"x", " @@@c:cmd", "same as @@@=`cmd`, without the backticks",
 	"x", " @@@e", "entries",
 	"x", " @@@f", "flags",
 	"x", " @@@f:hit*", "flags matching glob expression",
@@ -129,7 +129,7 @@ static ut32 vernum(const char *s) {
 }
 
 static RCoreHelpMessage help_msg_percent = {
-	"Usage:", "%[name[=value]]", "Set each NAME to VALUE in the environment",
+	"Usage:", "%[name[=value]]", "set each NAME to VALUE in the environment",
 	"%", "", "list all environment variables",
 	"%", "SHELL", "prints SHELL value",
 	"%", "TMPDIR=/tmp", "sets TMPDIR value to \"/tmp\"",
@@ -161,7 +161,7 @@ static RCoreHelpMessage help_msg_env = {
 };
 
 static RCoreHelpMessage help_msg_exclamation = {
-	"Usage:", "!<cmd>", "  Run given command as in system(3)",
+	"Usage:", "!<cmd>", "run given command as in system(3)",
 	"!", "", "list all historic commands",
 	"!", "ls", "execute 'ls' in shell",
 	"!*", "r2p x", "run r2 command via r2pipe in current session",
@@ -183,14 +183,14 @@ static RCoreHelpMessage help_msg_root = {
 	"\"", "[?][\"..|..\"]", "quote a command to avoid evaluaing special chars",
 	"*", "[?] off[=[0x]value]", "pointer read/write data/values (see ?v, wx, wv)",
 	"(macro arg0 arg1)",  "", "manage scripting macros",
-	".", "[?] [-|(m)|f|!sh|cmd]", "Define macro or load r2, cparse or rlang file",
+	".", "[?] [-|(m)|f|!sh|cmd]", "define macro or load r2, cparse or rlang file",
 	",", "[?] [/jhr]", "create a dummy table import from file and query it to filter/sort",
-	"_", "[?]", "Print last output",
+	"_", "[?]", "print last output",
 	"=","[?] [cmd]", "send/listen for remote commands (rap://, raps://, udp://, http://, <fd>)",
 	"<","[...]", "push escaped string into the RCons.readChar buffer",
 	"/","[?]", "search for bytes, regexps, patterns, ..",
 	"!","[?] [cmd]", "run given command as in system(3)",
-	"#","[?] !lang [..]", "Hashbang to run an rlang script",
+	"#","[?] !lang [..]", "hashbang to run an rlang script",
 	"a","[?]", "analysis commands",
 	"b","[?]", "display or change the block size",
 	"c","[?] [arg]", "compare block with given data",
@@ -211,15 +211,15 @@ static RCoreHelpMessage help_msg_root = {
 	"r","[?] [len]", "resize file",
 	"s","[?] [addr]", "seek to address (also for '0x', '0x1' == 's 0x1')",
 	"t","[?]", "types, noreturn, signatures, C parser and more",
-	"T","[?] [-] [num|msg]", "Text log utility (used to chat, sync, log, ...)",
+	"T","[?] [-] [num|msg]", "text log utility (used to chat, sync, log, ...)",
 	"u","[?]", "uname/undo seek/write",
 	"v","", "panels mode",
 	"V", "", "visual mode (Vv = func/var anal, VV = graph mode, ...)",
 	"w","[?] [str]", "multiple write operations",
 	"x","[?] [len]", "alias for 'px' (print hexadecimal)",
-	"y","[?] [len] [[[@]addr", "Yank/paste bytes from/to memory",
+	"y","[?] [len] [[[@]addr", "yank/paste bytes from/to memory",
 	"z", "[?]", "zignatures management",
-	"?[??]","[expr]", "Help or evaluate math expression",
+	"?[??]","[expr]", "help or evaluate math expression",
 	"?$?", "", "show available '$' variables and aliases",
 	"?@?", "", "misc help for '@' (seek), '~' (grep) (see ~?\"\"?)",
 	"?>?", "", "output redirection",
