@@ -7,21 +7,21 @@
 // should be 1 unless it makes the CI sad
 
 static RCoreHelpMessage help_msg_af_plus = {
-	"Usage:", "af+", "[addr] ([name] ([type] [diff]))",
+	"Usage:", "af+ [addr] ([name] ([type] [diff]))", "",
 	"af+", "$$", "add a raw function element. See afb+ to add basic blocks to it",
 	"af+", "$$ main", "add new function in current offset with 'main' as name",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_aex = {
-	"Usage:", "aex", "[a] [9090]",
+	"Usage:", "aex[a] [9090]", "",
 	"aex", " 90", "decode the given hexpairs and execute them",
 	"aexa", " mov rax, 33", "assemble instruction and execute it",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_a = {
-	"Usage:", "a", "[abdefFghoprxstc] [...]",
+	"Usage:", "a[abdefFghoprxstc] [...]", "",
 	"a", "", "alias for aai - analysis information",
 	"a*", "", "same as afl*;ah*;ax*",
 	"aa", "[?]", "analyze all (fcns + bbs) (aa0 to avoid sub renaming)",
@@ -58,13 +58,13 @@ static RCoreHelpMessage help_msg_afna = {
 };
 
 static RCoreHelpMessage help_msg_afu = {
-	"Usage:", "afu", "[addr]   # Resize and analyze function from current address until addr.",
+	"Usage:", "afu [addr]", "# resize and analyze function from current address until addr.",
 	"afu", " 0x100004093", "resize and analyze function from current address until 0x100004093",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_aae = {
-	"Usage:", "aae", "[pf] ([addr]) # analyze all kind of stuff using esil",
+	"Usage:", "aae[pf] ([addr])", "# analyze all kind of stuff using esil",
 	"aaep", "", "same as aepa@@@i - define anal pins by import flag names",
 	"aaep", "a", "run 'aep ret0@@@i' and then 'aaep' - all unknown imports are faked to return 0",
 	"aaef", "", "emulate all functions using esil to find out computed references (same as aef@@@F)",
@@ -74,14 +74,14 @@ static RCoreHelpMessage help_msg_aae = {
 };
 
 static RCoreHelpMessage help_msg_aav = {
-	"Usage:", "aav", "[sat] # Find values referencing a specific section or map",
+	"Usage:", "aav [sat]", "# find values referencing a specific section or map",
 	"aav", "", "find absolute reference values",
 	"aavr", "", "find relative reference values (address + 4 byte signed int)",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_aan = {
-	"Usage:", "aan", "[rg]   # Automatically name functions.",
+	"Usage:", "aan[rg]", "# automatically name functions.",
 	"aan", "", "autoname all functions",
 	"aang", "", "autoname all golang functions",
 	"aanr", "", "auto-noreturn propagation",
@@ -89,7 +89,7 @@ static RCoreHelpMessage help_msg_aan = {
 };
 
 static RCoreHelpMessage help_msg_afm = {
-	"Usage:", "afm", "[name]   # merge two functions.",
+	"Usage:", "afm [name]", "# merge two functions.",
 	"afm", " sym.func.100003d74", "merge current function into 0x100003d74",
 	NULL
 };
@@ -109,7 +109,7 @@ static RCoreHelpMessage help_msg_an = {
 };
 
 static RCoreHelpMessage help_msg_a8 = {
-	"Usage:", "a8", "[hexpairs]   # analyze the byte array given as input",
+	"Usage:", "a8 [hexpairs]", "# analyze the byte array given as input",
 	"a8 ", "5548", "analyzes 5548 byte array",
 	NULL
 };
@@ -193,7 +193,7 @@ static RCoreHelpMessage help_msg_aa = {
 };
 
 static RCoreHelpMessage help_msg_afls = {
-	"Usage:", "afls", "[afls] # sort function list",
+	"Usage:", "afls", "# sort function list",
 	"afls", "", "same as aflsa",
 	"aflsa", "", "sort by address (same as afls)",
 	"aflss", "", "sort by size",
@@ -203,7 +203,7 @@ static RCoreHelpMessage help_msg_afls = {
 };
 
 static RCoreHelpMessage help_msg_aflx = {
-	"Usage:", "aflx", "[jv*] # list function xrefs",
+	"Usage:", "aflx[jv*]", "# list function xrefs",
 	"aflx", "", "list function xrefs (who references or calls the current function)",
 	"aflxj", "", "list function xrefs in JSON format",
 	"aflxv", "", "list function xrefs with names",
@@ -212,7 +212,7 @@ static RCoreHelpMessage help_msg_aflx = {
 };
 
 static RCoreHelpMessage help_msg_ai = {
-	"Usage:", "ai", "[j*] [sz] # analysis/address information/imports",
+	"Usage:", "ai[j*] [sz]", "# analysis/address information/imports",
 	"ai", " @addr", "show address information",
 	"aia", "", "show architecture specific information instruction size and alignment details",
 	"aii", " [namespace]", "global import (like afii, but global)",
@@ -222,7 +222,7 @@ static RCoreHelpMessage help_msg_ai = {
 };
 
 static RCoreHelpMessage help_msg_aar = {
-	"Usage:", "aar", "[j*] [sz] # search and analyze xrefs",
+	"Usage:", "aar[j*] [sz]", "# search and analyze xrefs",
 	"aar", " [sz]", "analyze xrefs in current section or sz bytes of code",
 	"aarr", "", "analyze all function reference graph to find more functions (EXPERIMENTAL)",
 	"aar*", " [sz]", "list found xrefs in radare commands format",
@@ -258,7 +258,7 @@ static RCoreHelpMessage help_msg_abl = {
 };
 
 static RCoreHelpMessage help_msg_abt = {
-	"Usage:", "abt", "[addr] [num] # find num paths from current offset to addr",
+	"Usage:", "abt[ej] [addr] [num]", "# find num paths from current offset to addr",
 	"abt", " [addr] [num]", "find num paths from current offset to addr",
 	"abte", " [addr]", "emulate from beginning of function to the given address",
 	"abtj", " [addr] [num]", "display paths in JSON",
@@ -287,7 +287,7 @@ static RCoreHelpMessage help_msg_ac = {
 };
 
 static RCoreHelpMessage help_msg_ad = {
-	"Usage:", "ad", "[kt] [...]",
+	"Usage:", "ad[48fkt] [...]", "",
 	"ad", " [N] [D]", "analyze N data words at D depth",
 	"ad4", " [N] [D]", "analyze N data words at D depth (asm.bits=32)",
 	"ad8", " [N] [D]", "analyze N data words at D depth (asm.bits=64)",
@@ -313,7 +313,7 @@ static RCoreHelpMessage help_msg_aes = {
 };
 
 static RCoreHelpMessage help_msg_aei = {
-	"Usage:", "aei", "[smp] [...]",
+	"Usage:", "aei[smp] [...]", "",
 	"aei", "", "initialize ESIL VM state (aei- to deinitialize)",
 	"aeis", " argc [argv] [envp]", "initialize entrypoint stack environment",
 	"aeim", " [addr] [size] [name]", "initialize ESIL VM stack (aeim- remove)",
@@ -475,7 +475,7 @@ static RCoreHelpMessage help_msg_aeC = {
 };
 
 static RCoreHelpMessage help_msg_aeg = {
-	"Usage:", "aeg[fniv]", " [...]",
+	"Usage:", "aeg[fniv] [...]", "",
 	"aeg", "", "analyze current instruction as an esil graph",
 	"aegb", "", "data flow graph for current basic block (aeg `pieq $Fi`)",
 	"aegf", "", "analyze given expression and filter for register",
@@ -485,7 +485,7 @@ static RCoreHelpMessage help_msg_aeg = {
 };
 
 static RCoreHelpMessage help_msg_aep = {
-	"Usage:", "aep[-*c] ", " [...] manage esil pins, run r2 commands instead of esil",
+	"Usage:", "aep[-*c] [...]", "# manage esil pins, run r2 commands instead of esil",
 	"aepc", " [addr]", "change program counter for esil",
 	"aep*", "", "list pins in r2 commands",
 	"aep-", "*", "remove all pins",
@@ -501,7 +501,7 @@ static RCoreHelpMessage help_msg_aep = {
 };
 
 static RCoreHelpMessage help_msg_aek = {
-	"Usage:", "aek ", " [...]",
+	"Usage:", "aek [...]", "",
 	"aek", "", "dump the esil.stats database contents",
 	"aek ", "sdb.query", "evaluate sdb query on esil.stats db",
 	"aek-", "", "clear the esil.stats sdb instance",
@@ -509,7 +509,7 @@ static RCoreHelpMessage help_msg_aek = {
 };
 
 static RCoreHelpMessage help_msg_aets = {
-	"Usage:", "aets ", " [...]",
+	"Usage:", "aets [...]", "",
 	"aets+", "", "start ESIL trace session",
 	"aets-", "", "stop ESIL trace session",
 	NULL
@@ -583,7 +583,7 @@ static RCoreHelpMessage help_msg_afc = {
 };
 
 static RCoreHelpMessage help_msg_afC = {
-	"Usage:", "afC", " [addr]",
+	"Usage:", "afC [addr]", "",
 	"afC", "", "function cycles cost",
 	"afCc", "", "cyclomatic complexity",
 	"afCl", "", "loop count (backward jumps)",
@@ -591,7 +591,7 @@ static RCoreHelpMessage help_msg_afC = {
 };
 
 static RCoreHelpMessage help_msg_afi = {
-	"Usage:", "afi[jlp*]", " <addr>",
+	"Usage:", "afi[jlp*] [addr]", "",
 	"afi", "", "show information of the function",
 	"afi.", "", "show function name in current offset",
 	"afi*", "", "function, variables and arguments",
@@ -702,7 +702,7 @@ static RCoreHelpMessage help_msg_afv = {
 };
 
 static RCoreHelpMessage help_msg_aeim = {
-	"Usage:", "aeim", " [addr] [size] [name] - initialize the ESIL VM stack",
+	"Usage:", "aeim [addr] [size] [name]", "# initialize the ESIL VM stack",
 	"aeim", "", "initialize esil memory with default values from esil.stack.* evals",
 	"aeim", " 0x10000", "same as aeim@e:esil.stack.addr=0x10000",
 	"aeim", " 0x10000 2M mystack", "give a name to that new 2MB stack",
@@ -710,7 +710,7 @@ static RCoreHelpMessage help_msg_aeim = {
 };
 
 static RCoreHelpMessage help_msg_afvb = {
-	"Usage:", "afvb", " [idx] [name] ([type])",
+	"Usage:", "afvb [idx] [name] ([type])", "",
 	"afvb", "", "list base pointer based arguments, locals",
 	"afvb*", "", "same as afvb but in r2 commands",
 	"afvb", " [idx] [name] ([type])", "define base pointer based arguments, locals",
@@ -722,7 +722,7 @@ static RCoreHelpMessage help_msg_afvb = {
 };
 
 static RCoreHelpMessage help_msg_afvr = {
-	"Usage:", "afvr", " [reg] [type] [name]",
+	"Usage:", "afvr [reg] [type] [name]", "",
 	"afvr", "", "list register based arguments",
 	"afvr*", "", "same as afvr but in r2 commands",
 	"afvr", " [reg] [name] ([type])", "define register arguments",
@@ -734,7 +734,7 @@ static RCoreHelpMessage help_msg_afvr = {
 };
 
 static RCoreHelpMessage help_msg_afvs = {
-	"Usage:", "afvs", " [idx] [type] [name]",
+	"Usage:", "afvs [idx] [type] [name]", "",
 	"afvs", "", "list stack based arguments and locals",
 	"afvs*", "", "same as afvs but in r2 commands",
 	"afvs", " [idx] [name] [type]", "define stack based arguments,locals",
@@ -804,7 +804,7 @@ static RCoreHelpMessage help_msg_agn = {
 };
 
 static RCoreHelpMessage help_msg_ah = {
-	"Usage:", "ah[lba-]", "# analysis Hints",
+	"Usage:", "ah[lba-]", "# analysis hints",
 	"ah?", "", "show this help",
 	"ah?", " offset", "show hint of given offset",
 	"ah", "", "list hints in human-readable format",

@@ -4,7 +4,7 @@
 #include <r_debug.h>
 
 static RCoreHelpMessage help_msg_o = {
-	"Usage: o","[file] ([offset])","# Open and close files, maps, and banks",
+	"Usage: o","[file] ([offset])","# open and close files, maps, and banks",
 	"o","","list opened files",
 	"o"," [file] 0x4000 rwx", "map file at 0x4000",
 	"o"," [file]","open [file] file in read-only",
@@ -35,7 +35,7 @@ static RCoreHelpMessage help_msg_o = {
 };
 
 static RCoreHelpMessage help_msg_on = {
-	"Usage: on[n+*]", "[file] ([addr] [rwx])","# Open file without parsing headers",
+	"Usage: on[n+*]", "[file] ([addr] [rwx])","# open file without parsing headers",
 	"on"," /bin/ls 0x4000","map raw file at 0x4000 (no r_bin involved)",
 	"onn"," [file] ([rwx])","open file without creating any map or parsing headers with rbin)",
 	"onnu"," [file] ([rwx])","same as onn, but unique, will return previos fd if already opened",

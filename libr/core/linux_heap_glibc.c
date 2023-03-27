@@ -1492,7 +1492,7 @@ void GH(print_malloc_info)(RCore *core, GHT m_state, GHT malloc_state) {
 }
 
 static const char* GH(help_msg)[] = {
-	"Usage:", " dmh", " # Memory map heap",
+	"Usage:", " dmh", "# memory map heap",
 	"dmh", "", "list the chunks inside the heap segment",
 	"dmh", " @[malloc_state]", "list heap chunks of a particular arena",
 	"dmha", "", "list all malloc_state instances in application",
