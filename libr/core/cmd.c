@@ -55,7 +55,7 @@ static void cmd_debug_reg(RCore *core, const char *str);
 #include "cmd_help.c"
 
 static RCoreHelpMessage help_msg_dollar = {
-	"Usage:", "$alias[=cmd] [args...]", "alias commands and data (See ?$? for help on $variables)",
+	"Usage:", "$alias[=cmd] [args...]", "# alias commands and data (See ?$? for help on $variables)",
 	"$", "", "list all defined aliases",
 	"$*", "", "list all defined aliases and their values, with unprintable characters escaped",
 	"$**", "", "same as above, but if an alias contains unprintable characters, b64 encode it",
@@ -77,7 +77,7 @@ static RCoreHelpMessage help_msg_dollar = {
 };
 
 static RCoreHelpMessage help_msg_l = {
-	"Usage:", "l[erls] [arg]", "internal less (~..) and file listing (!ls)",
+	"Usage:", "l[erls] [arg]", "# internal less (~..) and file listing (!ls)",
 	"lu", " [path]", "same as #!lua",
 	"ll", " [path]", "same as ls -l",
 	"lr", " [path]", "same as ls -r",
@@ -92,7 +92,7 @@ static RCoreHelpMessage help_msg_l = {
 };
 
 static RCoreHelpMessage help_msg_quote = {
-	"Usage:", "\"[\"..|..\"]", "quote the command to avoid evaluating special characters",
+	"Usage:", "\"[\"..|..\"]", "# quote the command to avoid evaluating special characters",
 	"\"?", "", "show this help",
 	"\"", "?e hello \\\"world\\\"\"", "print (hello \"world\")",
 	"\"", "?e x;y\";\"?e y;x\"", "run two commands (prints x;y\ny;x)",
@@ -103,14 +103,14 @@ static RCoreHelpMessage help_msg_quote = {
 };
 
 static RCoreHelpMessage help_msg_plus = {
-	"Usage:", "+", "seek forward, same as s+X (see s? and -? for more help)",
+	"Usage:", "+", "# seek forward, same as s+X (see s? and -? for more help)",
 	"+", "8", "seek 8 bytes forward, same as s+8",
 	"++", "", "seek one block forward. Same as s++ (see `b` command)",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_j = {
-	"Usage:", "j[:o]in", "run command with json facilities or join two files",
+	"Usage:", "j[:o]in", "# run command with json facilities or join two files",
 	"j:", "?e", "run '?e' command and show the result stats in json",
 	"ji:", "[cmd]", "run command and indent it as json like (cmd~{})",
 	"js", " [expr]", "run given javascript expression",
@@ -123,7 +123,7 @@ static RCoreHelpMessage help_msg_j = {
 };
 
 static RCoreHelpMessage help_msg_dash = {
-	"Usage:", "-", "open editor and run the r2 commands in the saved document",
+	"Usage:", "-", "# open editor and run the r2 commands in the saved document",
 	"", "'-' '.-' '. -'", "those three commands do the same",
 	"-", "8", "same as s-8, but shorter to type (see +? command)",
 	"-a", " x86", "same as r2 -a x86 or e asm.arch=x86",
@@ -140,7 +140,7 @@ static RCoreHelpMessage help_msg_dash = {
 };
 
 static RCoreHelpMessage help_msg_star = {
-	"Usage:", "*<addr>[=[0x]value]", "pointer read/write data/values",
+	"Usage:", "*<addr>[=[0x]value]", "# pointer read/write data/values",
 	"*", "entry0=cc", "write trap in entrypoint",
 	"*", "entry0+10=0x804800", "write value in delta address",
 	"*", "entry0", "read byte at given address",
@@ -250,7 +250,7 @@ static RCoreHelpMessage help_msg_equalg = {
 };
 
 static RCoreHelpMessage help_msg_b = {
-	"Usage:",  "b[f] [arg]\n", "get/set block size",
+	"Usage:",  "b[f] [arg]\n", "# get/set block size",
 	"b", " 33", "set block size to 33",
 	"b", " eip+4", "numeric argument can be an expression",
 	"b", "", "display current block size",
@@ -265,7 +265,7 @@ static RCoreHelpMessage help_msg_b = {
 };
 
 static RCoreHelpMessage help_msg_k = {
-	"Usage:", "k[s] [key[=value]]", "SDB Query",
+	"Usage:", "k[s] [key[=value]]", "# SDB Query",
 	"k", " anal/**", "list namespaces under anal",
 	"k", " anal/meta/*", "list kv from anal > meta namespaces",
 	"k", " anal/meta/meta.0x80404", "get value for meta.0x80404 key",
@@ -282,7 +282,7 @@ static RCoreHelpMessage help_msg_k = {
 };
 
 static RCoreHelpMessage help_msg_r = {
-	"Usage:", "r[+-][ size]", "resize file",
+	"Usage:", "r[+-][ size]", "# resize file",
 	"r", "", "display file size",
 	"rj", "", "display the file size in JSON format",
 	"r", " size", "expand or truncate file to given size",
@@ -307,7 +307,7 @@ static RCoreHelpMessage help_msg_r = {
 };
 
 static RCoreHelpMessage help_msg_u = {
-	"Usage:", "u", "uname or undo write/seek",
+	"Usage:", "u", "# uname or undo write/seek",
 	"u", "", "show system uname (alias for uname)",
 	"uw", "", "alias for wc (requires: e io.cache=true)",
 	"us", "", "alias for s- (seek history)",
@@ -319,7 +319,7 @@ static RCoreHelpMessage help_msg_u = {
 };
 
 static RCoreHelpMessage help_msg_uname = {
-	"Usage:", "uname", "show information about the current system",
+	"Usage:", "uname", "# show information about the current system",
 	"uname", "", "show host operating system",
 	"uname", " -j", "show uname information in JSON",
 	"uname", " -b", "show machine cpu register bits size",
@@ -329,7 +329,7 @@ static RCoreHelpMessage help_msg_uname = {
 };
 
 static RCoreHelpMessage help_msg_uc = {
-	"Usage:", "uc [cmd],[revert-cmd]", "undo core commands (see `e cmd.undo`)",
+	"Usage:", "uc [cmd],[revert-cmd]", "# undo core commands (see `e cmd.undo`)",
 	"uc", " w hello,w world", "add a new undo command manually",
 	"uc", "", "list all core undos commands",
 	"uc*", "", "list all core undos as r2 commands",

@@ -4,7 +4,7 @@
 #include "../bin/format/pdb/pdb_downloader.h"
 
 static RCoreHelpMessage help_msg_i = {
-	"Usage: i", "", "get info from opened file (see rabin2's manpage)",
+	"Usage: i", "", "# get info from opened file (see rabin2's manpage)",
 	"Output mode:", "", "",
 	"'*'", "", "output in radare commands",
 	"'j'", "", "output in json",
@@ -67,7 +67,7 @@ static RCoreHelpMessage help_msg_i = {
 
 // TODO: this command needs a refactoring
 static RCoreHelpMessage help_msg_id = {
-	"Usage: idp", "", "debug information",
+	"Usage: idp", "", "# debug information",
 	"id", "", "show DWARF source lines information",
 	"idp", " [file.pdb]", "load pdb file information",
 	"idpi", " [file.pdb]", "show pdb file information",

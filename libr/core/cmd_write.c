@@ -38,7 +38,7 @@ static RCoreHelpMessage help_msg_w = {
 };
 
 static RCoreHelpMessage help_msg_ws = {
-	"Usage:", "ws[124?] [string]", "Pascal strings are not null terminated and store the length in binary at the beginning",
+	"Usage:", "ws[124?] [string]", "# Pascal strings are not null terminated and store the length in binary at the beginning",
 	"ws", " str", "write pascal string using first byte as length",
 	"ws1", " str", "same as above",
 	"ws2", " str", "same as above but using ut16 as length (honors cfg.bigendian)",
@@ -81,7 +81,7 @@ static RCoreHelpMessage help_msg_wc = {
 };
 
 static RCoreHelpMessage help_msg_we = {
-	"Usage", "", "write extend # resize the file",
+	"Usage", "", "# write extend # resize the file",
 	"wen", " <num>", "extend the underlying file inserting NUM null bytes at current offset",
 	"weN", " <addr> <len>", "extend current file and insert bytes at address",
 	"wes", " <addr>  <dist> <block_size>", "shift a blocksize left or write in the editor",
@@ -137,7 +137,7 @@ static RCoreHelpMessage help_msg_wp = {
 };
 
 static RCoreHelpMessage help_msg_wt = {
-	"Usage:", "wt[afs] [filename] [size]", "write current block or [size] bytes from offset to file",
+	"Usage:", "wt[afs] [filename] [size]", "# write current block or [size] bytes from offset to file",
 	"wta", " [filename]", "append to 'filename'",
 	"wtf", " [filename] [size]", "write to file (see also 'wxf' and 'wf?')",
 	"wtf!", " [filename]", "write to file from current address to eof (ignores given size)",
@@ -148,7 +148,7 @@ static RCoreHelpMessage help_msg_wt = {
 };
 
 static RCoreHelpMessage help_msg_wf = {
-	"Usage:", "wf[fs] [-|args ..]", "write from (file, swap, offset)",
+	"Usage:", "wf[fs] [-|args ..]", "# write from (file, swap, offset)",
 	"wf", " 10 20", "write 20 bytes from offset 10 into current seek",
 	"wff", " file [len]", "write contents of file into current offset",
 	"wfs", " host:port [len]", "write from socket (tcp listen in port for N bytes)",
@@ -157,7 +157,7 @@ static RCoreHelpMessage help_msg_wf = {
 };
 
 static RCoreHelpMessage help_msg_wv = {
-	"Usage:", "wv[size] [value]", "write value of given size",
+	"Usage:", "wv[size] [value]", "# write value of given size",
 	"wv", " 0x834002", "write dword with this value",
 	"wv1", " 234", "write one byte with this value",
 	"wv2", " 234", "write unsigned short (2 bytes) with this number",

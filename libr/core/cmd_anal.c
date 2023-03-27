@@ -64,7 +64,7 @@ static RCoreHelpMessage help_msg_afu = {
 };
 
 static RCoreHelpMessage help_msg_aae = {
-	"Usage:", "aae", "[pf] ([addr]) # Analyze all kind of stuff using esil",
+	"Usage:", "aae", "[pf] ([addr]) # analyze all kind of stuff using esil",
 	"aaep", "", "same as aepa@@@i - define anal pins by import flag names",
 	"aaep", "a", "run 'aep ret0@@@i' and then 'aaep' - all unknown imports are faked to return 0",
 	"aaef", "", "emulate all functions using esil to find out computed references (same as aef@@@F)",
@@ -248,7 +248,7 @@ static RCoreHelpMessage help_msg_ab = {
 };
 
 static RCoreHelpMessage help_msg_abl = {
-	"Usage:", "abl", "analyzed basicblocks listing",
+	"Usage:", "abl", "# analyzed basicblocks listing",
 	"abl", "", "list all program-wide basic blocks analyzed",
 	"abl,", " [table-query]", "render the list using a table",
 	"ablc", "", "count how many basic blocks are registered",
@@ -266,7 +266,7 @@ static RCoreHelpMessage help_msg_abt = {
 };
 
 static RCoreHelpMessage help_msg_ac = {
-	"Usage:", "ac", "anal classes commands",
+	"Usage:", "ac", "# anal classes commands",
 	"acl", "[j*]", "list all classes",
 	"acll", "[j] (class_name)", "list all or single class detailed",
 	"ac", " [class name]", "add class",
@@ -299,7 +299,7 @@ static RCoreHelpMessage help_msg_ad = {
 };
 
 static RCoreHelpMessage help_msg_aes = {
-	"Usage:", "aes[pbosu]", "esil stepping utilities",
+	"Usage:", "aes[pbosu]", "# esil stepping utilities",
 	"aesp", " [X] [N]", "evaluate N instr from offset X",
 	"aesb", "", "step back",
 	"aeso", " ", "step over",
@@ -322,7 +322,7 @@ static RCoreHelpMessage help_msg_aei = {
 };
 
 static RCoreHelpMessage help_msg_ae = {
-	"Usage:", "ae[idesr?] [arg]", "ESIL code emulation",
+	"Usage:", "ae[idesr?] [arg]", "# ESIL code emulation",
 	"ae", " [expr]", "evaluate ESIL expression",
 	"ae?", "", "show this help",
 	"ae??", "", "show ESIL help",
@@ -549,7 +549,7 @@ static RCoreHelpMessage help_msg_af = {
 };
 
 static RCoreHelpMessage help_msg_afb = {
-	"Usage:", "afb", "list basic blocks of given function",
+	"Usage:", "afb", "# list basic blocks of given function",
 	".afbr-", "", "set breakpoint on every return address of the function",
 	".afbr-*", "", "remove breakpoint on every return address of the function",
 	"afb", " [addr]", "list basic blocks of function",
@@ -615,7 +615,7 @@ static RCoreHelpMessage help_msg_afis = {
 };
 
 static RCoreHelpMessage help_msg_afl = {
-	"Usage:", "afl", "list all functions",
+	"Usage:", "afl", "# list all functions",
 	"afl", "", "list functions",
 	"afl.", "", "display function in current offset (see afi.)",
 	"afl+", "", "display sum all function sizes",
@@ -634,7 +634,7 @@ static RCoreHelpMessage help_msg_afl = {
 };
 
 static RCoreHelpMessage help_msg_afll = {
-	"Usage:", "", "list functions in verbose mode",
+	"Usage:", "", "# list functions in verbose mode",
 	"", "", "",
 	"Table fields:", "", "",
 	"", "", "",
@@ -657,7 +657,7 @@ static RCoreHelpMessage help_msg_afll = {
 };
 
 static RCoreHelpMessage help_msg_afn = {
-	"Usage:", "afn[sa]", "analyze function names",
+	"Usage:", "afn[sa]", "# analyze function names",
 	"afn", " [name]", "rename the function",
 	"afn", " base64:encodedname", "rename the function",
 	"afn.", "", "same as afn without arguments. show the function name in current offset",
@@ -668,7 +668,7 @@ static RCoreHelpMessage help_msg_afn = {
 };
 
 static RCoreHelpMessage help_msg_afs = {
-	"Usage:", "afs[r]", "analyze function signatures",
+	"Usage:", "afs[r]", "# analyze function signatures",
 	"afs", "[!] ([fcnsign])", "get/set function signature at current address (afs! uses cfg.editor)",
 	"afs*", " ([signame])", "get function signature in flags",
 	"afsj", " ([signame])", "get function signature in JSON",
@@ -683,7 +683,7 @@ static RCoreHelpMessage help_msg_aft = {
 };
 
 static RCoreHelpMessage help_msg_afv = {
-	"Usage:", "afv[rbs]", "function variables manipulation",
+	"Usage:", "afv[rbs]", "# function variables manipulation",
 	"afv*", "", "output r2 command to add args/locals to flagspace",
 	"afv-", "([name])", "remove all or given var",
 	"afv=", "", "list function variables and arguments with disasm refs",
@@ -804,7 +804,7 @@ static RCoreHelpMessage help_msg_agn = {
 };
 
 static RCoreHelpMessage help_msg_ah = {
-	"Usage:", "ah[lba-]", "analysis Hints",
+	"Usage:", "ah[lba-]", "# analysis Hints",
 	"ah?", "", "show this help",
 	"ah?", " offset", "show hint of given offset",
 	"ah", "", "list hints in human-readable format",
@@ -834,7 +834,7 @@ static RCoreHelpMessage help_msg_ah = {
 };
 
 static RCoreHelpMessage help_msg_ahs = {
-	"Usage:", "ahs [size] [@ addr]", "define opcode size hint",
+	"Usage:", "ahs [size] [@ addr]", "# define opcode size hint",
 	"ahs", " 16", "hint the analysis to make the instruction 16 bytes in size",
 	"ahs-", "", "unset the instruction size hint in the current offset",
 	"ahs-", "*", "unset the instruction size hint in the current offset",
@@ -843,7 +843,7 @@ static RCoreHelpMessage help_msg_ahs = {
 };
 
 static RCoreHelpMessage help_msg_aho = {
-	"Usage:", "aho [optype] [@ addr]", "define opcode type hint",
+	"Usage:", "aho [optype] [@ addr]", "# define opcode type hint",
 	"aho", " nop", "change the opcode type in current address to be considered a NOP",
 	"aho", "", "show the current opcode hint if any",
 	"aho-", "$$", "delete hints in current offset",
@@ -852,7 +852,7 @@ static RCoreHelpMessage help_msg_aho = {
 };
 
 static RCoreHelpMessage help_msg_ahb = {
-	"Usage:", "ahb [8|16|32|64] [@ addr]", "define asm.bits hint at given address",
+	"Usage:", "ahb [8|16|32|64] [@ addr]", "# define asm.bits hint at given address",
 	"ahb", " 16", "set asm.bits=16 in the given address",
 	"ahb", "", "get asm.bits used in given addr (current seek)",
 	"ahb", "-$$", "delete all the hints in the given address",
@@ -861,13 +861,13 @@ static RCoreHelpMessage help_msg_ahb = {
 };
 
 static RCoreHelpMessage help_msg_ahr = {
-	"Usage:", "ahr addr", "set instruction as return type (similar to 'aho ret'?)",
+	"Usage:", "ahr addr", "# set instruction as return type (similar to 'aho ret'?)",
 	"ahr", " $$", "current instruction may be considered as the end of a function",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_ahi = {
-	"Usage:", "ahi [2|8|10|10u|16|bodhipSs] [@ offset]", "define numeric base",
+	"Usage:", "ahi [2|8|10|10u|16|bodhipSs] [@ offset]", "# define numeric base",
 	"ahi", " <base>", "set numeric base (2, 8, 10, 16)",
 	"ahi", " 10|d", "set base to signed decimal (10), sign bit should depend on receiver size",
 	"ahi", " 10u|du", "set base to unsigned decimal (11)",
@@ -883,7 +883,7 @@ static RCoreHelpMessage help_msg_ahi = {
 };
 
 static RCoreHelpMessage help_msg_aht = {
-	"Usage:", "aht[s] [addr|type]", "mark immediate as type offset (moved to aho)",
+	"Usage:", "aht[s] [addr|type]", "# mark immediate as type offset (moved to aho)",
 	"ahts", " <offset>", "list all matching structure offsets",
 	"aht", " <struct.member>", "change immediate to structure offset",
 	"aht?", "", "show this help",
@@ -891,14 +891,14 @@ static RCoreHelpMessage help_msg_aht = {
 };
 
 static RCoreHelpMessage help_msg_aot = {
-	"Usage:", "aot[l]", "list opcode types",
+	"Usage:", "aot[l]", "# list opcode types",
 	"aot", "", "show type of the current instruction",
 	"aotl", "", "list all possible opcode types (See /atl)",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_aom = {
-	"Usage:", "aom[ljd] [arg]", "list opcode mnemonics",
+	"Usage:", "aom[ljd] [arg]", "# list opcode mnemonics",
 	"aom", "", "show instruction mnemonic",
 	"aom.", "", "show instruction mnemonic in current address",
 	"aoml", "", "list all mnemonics",
@@ -908,7 +908,7 @@ static RCoreHelpMessage help_msg_aom = {
 };
 
 static RCoreHelpMessage help_msg_ao = {
-	"Usage:", "ao[e?] [len]", "analyze Opcodes",
+	"Usage:", "ao[e?] [len]", "# analyze Opcodes",
 	"ao", " 5", "display opcode analysis of 5 opcodes",
 	"ao*", "", "display opcode in r commands",
 	"aob", " ([hex])", "analyze meaning of every single bit in the current opcode",
@@ -961,7 +961,7 @@ static RCoreHelpMessage help_msg_ar = {
 };
 
 static RCoreHelpMessage help_msg_ara = {
-	"Usage:", "ara[+-s]", "register Arena Push/Pop/Swap",
+	"Usage:", "ara[+-s]", "# register Arena Push/Pop/Swap",
 	"ara", "", "show all register arenas allocated",
 	"ara", "+", "push a new register arena for each type",
 	"ara", "-", "pop last register arena",
@@ -976,7 +976,7 @@ static RCoreHelpMessage help_msg_arw = {
 };
 
 static RCoreHelpMessage help_msg_as = {
-	"Usage: as[ljk?]", "", "syscall name <-> number utility",
+	"Usage: as[ljk?]", "", "# syscall name <-> number utility",
 	"as", "", "show current syscall and arguments",
 	"as", " 4", "show syscall 4 based on asm.os and current regs/mem",
 	"asc[a]", " 4", "dump syscall info in .asm or .h",
@@ -989,7 +989,7 @@ static RCoreHelpMessage help_msg_as = {
 };
 
 static RCoreHelpMessage help_msg_av = {
-	"Usage:", "av[?jr*]", "C++ vtables and RTTI",
+	"Usage:", "av[?jr*]", "# C++ vtables and RTTI",
 	"av", "", "search for vtables in data sections and show results",
 	"avj", "", "like av, but as json",
 	"av*", "", "like av, but as r2 commands",
@@ -1030,7 +1030,7 @@ static RCoreHelpMessage help_msg_ax = {
 };
 
 static RCoreHelpMessage help_msg_axl= {
-	"Usage:", "axl[jcq]", "show global xrefs",
+	"Usage:", "axl[jcq]", "# show global xrefs",
 	"axl", "", "list all xrefs",
 	"axlj", "", "list xrefs in json format",
 	"axlc", "", "count how many xrefs are registered",
@@ -1039,14 +1039,14 @@ static RCoreHelpMessage help_msg_axl= {
 };
 
 static RCoreHelpMessage help_msg_axv= {
-	"Usage:", "axv[?j]", "show xrefs to local variables in current function",
+	"Usage:", "axv[?j]", "# show xrefs to local variables in current function",
 	"axv", " ([addr])", "optionally you can specify address instead of current seek",
 	"axvj", " ([addr])", "show in json",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_axt= {
-	"Usage:", "axt[?gq*]", "find data/code references to this address",
+	"Usage:", "axt[?gq*]", "# find data/code references to this address",
 	"axtj", " [addr]", "find data/code references to this address and print in json format",
 	"axtg", " [addr]", "display commands to generate graphs according to the xrefs",
 	"axtq", " [addr]", "find and list the data/code references in quiet mode",
@@ -1056,7 +1056,7 @@ static RCoreHelpMessage help_msg_axt= {
 };
 
 static RCoreHelpMessage help_msg_axf= {
-	"Usage:", "axf[?gq*]", "find data/code references from this address",
+	"Usage:", "axf[?gq*]", "# find data/code references from this address",
 	"axfj", " [addr]", "find data/code references to this address and print in json format",
 	"axfg", " [addr]", "display commands to generate graphs according to the xrefs",
 	"axfq", " [addr]", "find and list the data/code references in quiet mode",

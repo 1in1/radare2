@@ -4,7 +4,7 @@
 #include <r_debug.h>
 
 static RCoreHelpMessage help_msg_o = {
-	"Usage: o","[file] ([offset])","Open and close files, maps, and banks",
+	"Usage: o","[file] ([offset])","# Open and close files, maps, and banks",
 	"o","","list opened files",
 	"o"," [file] 0x4000 rwx", "map file at 0x4000",
 	"o"," [file]","open [file] file in read-only",
@@ -35,7 +35,7 @@ static RCoreHelpMessage help_msg_o = {
 };
 
 static RCoreHelpMessage help_msg_on = {
-	"Usage: on[n+*]", "[file] ([addr] [rwx])","Open file without parsing headers",
+	"Usage: on[n+*]", "[file] ([addr] [rwx])","# Open file without parsing headers",
 	"on"," /bin/ls 0x4000","map raw file at 0x4000 (no r_bin involved)",
 	"onn"," [file] ([rwx])","open file without creating any map or parsing headers with rbin)",
 	"onnu"," [file] ([rwx])","same as onn, but unique, will return previos fd if already opened",
@@ -45,7 +45,7 @@ static RCoreHelpMessage help_msg_on = {
 };
 
 static RCoreHelpMessage help_msg_o_dash = {
-	"Usage: o-[#!*$.-]", "", "close opened files",
+	"Usage: o-[#!*$.-]", "", "# close opened files",
 	"o-*","","close all opened files",
 	"o-!","","close all files except the current one",
 	"o-3","","close fd=3",
@@ -65,7 +65,7 @@ static RCoreHelpMessage help_msg_op = {
 };
 
 static RCoreHelpMessage help_msg_omn = {
-	"Usage: omn[.i]", "([fd]) [name]", "define a name for the given map",
+	"Usage: omn[.i]", "([fd]) [name]", "# define a name for the given map",
 	"omn", " mapaddr [name]", "set/delete name for map which spans mapaddr",
 	"omn.", "([-|name])", "show/set/delete name for current map",
 	"omni", " mapid [name]", "set/delete name for map with mapid",
@@ -73,7 +73,7 @@ static RCoreHelpMessage help_msg_omn = {
 };
 
 static RCoreHelpMessage help_msg_omb = {
-	"Usage: omb[+-adgq]", "[fd]", "operate on memory banks",
+	"Usage: omb[+-adgq]", "[fd]", "# operate on memory banks",
 	"omb", "", "list all memory banks",
 	"omb", " [id]", "switch to use a different bank",
 	"omb+", " [name]", "create a new bank with given name",
@@ -87,7 +87,7 @@ static RCoreHelpMessage help_msg_omb = {
 };
 
 static RCoreHelpMessage help_msg_oba = {
-	"Usage: oba", "[addr] ([filename])", "load bininfo and update flags",
+	"Usage: oba", "[addr] ([filename])", "# load bininfo and update flags",
 	"oba", " [addr]", "open bin info from the given address",
 	"oba", " [addr] [baddr]", "open file and load bin info at given address",
 	"oba", " [addr] [/abs/filename]", "open file and load bin info at given address",
@@ -95,7 +95,7 @@ static RCoreHelpMessage help_msg_oba = {
 };
 
 static RCoreHelpMessage help_msg_ob = {
-	"Usage: ob", "", "list open binary files backed by fd",
+	"Usage: ob", "", "# list open binary files backed by fd",
 	"ob", " [name|bfid]", "switch to open given objid (or name)",
 	"ob", "", "list opened binary files and objid",
 	"ob*", "", "list opened binary files and objid (r2 commands)",
@@ -119,7 +119,7 @@ static RCoreHelpMessage help_msg_ob = {
 };
 
 static RCoreHelpMessage help_msg_om = {
-	"Usage: om", "[arg]", "map opened files",
+	"Usage: om", "[arg]", "# map opened files",
 	"om", " [fd]", "list all defined IO maps for a specific fd",
 	"om", " fd vaddr [size] [paddr] [rwx] [name]", "create new io map",
 	"om", "", "list all defined IO maps",
@@ -152,7 +152,7 @@ static RCoreHelpMessage help_msg_om = {
 };
 
 static RCoreHelpMessage help_msg_oo = {
-	"Usage: oo", "[arg]", "map opened files",
+	"Usage: oo", "[arg]", "# map opened files",
 	"oo", "", "reopen current file",
 	"oo+", "", "reopen in read-write",
 	"oob", " [baddr]", "reopen loading rbin info (change base address?)",
@@ -167,7 +167,7 @@ static RCoreHelpMessage help_msg_oo = {
 };
 
 static RCoreHelpMessage help_msg_ood = {
-	"Usage: ood", "", "debug (re)open commands",
+	"Usage: ood", "", "# debug (re)open commands",
 	"ood", " [args]", "reopen in debug mode (with args)",
 	"oodf", " [file]", "reopen in debug mode using the given file",
 	"oodr", " [rarun2]", "same as dor ..;ood",

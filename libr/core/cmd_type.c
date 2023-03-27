@@ -3,7 +3,7 @@
 #include <r_core.h>
 
 static RCoreHelpMessage help_msg_t = {
-	"Usage: t", "", "parse, manage, and print C types",
+	"Usage: t", "", "# parse, manage, and print C types",
 	"t", "", "list all loaded types",
 	"tj", "", "list all loaded types as json",
 	"t", " <type>", "show type in 'pf' syntax",
@@ -29,7 +29,7 @@ static RCoreHelpMessage help_msg_t = {
 };
 
 static RCoreHelpMessage help_msg_tx = {
-	"Usage: tx[.tflg]", "[...]", "function types",
+	"Usage: tx[.tflg]", "[...]", "# function types",
 	"tx", "", "list functions and the types they use",
 	"tx.", "", "same as txf",
 	"tx", " int32_t", "list functions names using this type",
@@ -41,7 +41,7 @@ static RCoreHelpMessage help_msg_tx = {
 };
 
 static RCoreHelpMessage help_msg_tcc = {
-	"Usage: tcc", "[-name]", "type function calling conventions (see also afc? and arcc)",
+	"Usage: tcc", "[-name]", "# type function calling conventions (see also afc? and arcc)",
 	"tcc", "", "list all calling conventions",
 	"tcc*", "", "list calling conventions as r2 commands",
 	"tcck", "", "list calling conventions in k=v format",
@@ -77,7 +77,7 @@ static RCoreHelpMessage help_msg_to = {
 };
 
 static RCoreHelpMessage help_msg_tp = {
-	"Usage: tp[vx]", " <type> [...]", "print type",
+	"Usage: tp[vx]", " <type> [...]", "# print type",
 	"tp", "  <type> [addr|varname]", "cast data at <address> to <type> and print it (XXX: type can contain spaces)",
 	"tpv", " <type> [@addr]", "show offset formatted for given type",
 	"tpx", " <type> <hexpairs>", "show value for type with specified byte sequence (XXX: type can contain spaces)",
@@ -85,7 +85,7 @@ static RCoreHelpMessage help_msg_tp = {
 };
 
 static RCoreHelpMessage help_msg_tc = {
-	"Usage: tc[...]", " [type]", "print loaded types",
+	"Usage: tc[...]", " [type]", "# print loaded types",
 	"tc", "", "list all loaded types in C output format with newlines",
 	"tc", " [type.name]", "list given loaded type in C output format with newlines",
 	"tcd", "", "list all loaded types in C output format without newlines",
@@ -94,7 +94,7 @@ static RCoreHelpMessage help_msg_tc = {
 };
 
 static RCoreHelpMessage help_msg_te = {
-	"Usage: te[...]", "", "type enum commands",
+	"Usage: te[...]", "", "# type enum commands",
 	"te", "", "list all loaded enums",
 	"te", " <enum>", "print all values of enum for given name",
 	"te", " <enum> <value>", "show name for given enum number",
@@ -109,7 +109,7 @@ static RCoreHelpMessage help_msg_te = {
 };
 
 static RCoreHelpMessage help_msg_tt = {
-	"Usage: tt[...]", "", "type typedef commands",
+	"Usage: tt[...]", "", "# type typedef commands",
 	"tt", "", "list all loaded typedefs",
 	"tt", " <typename>", "show name for given type alias",
 	"ttj", "", "show typename and type alias in json",
@@ -118,7 +118,7 @@ static RCoreHelpMessage help_msg_tt = {
 };
 
 static RCoreHelpMessage help_msg_tl = {
-	"Usage: tl[...]", "[typename] [[=] address]", "type link commands",
+	"Usage: tl[...]", "[typename] [[=] address]", "# type link commands",
 	"tl", "", "list all links.",
 	"tll", "", "list all links in readable format.",
 	"tllj", "", "list all links in readable JSON format.",
@@ -133,7 +133,7 @@ static RCoreHelpMessage help_msg_tl = {
 };
 
 static RCoreHelpMessage help_msg_tn = {
-	"Usage:", "tn [-][0xaddr|symname]", "manage no-return marks",
+	"Usage:", "tn [-][0xaddr|symname]", "# manage no-return marks",
 	"tn[a]", " 0x3000", "stop function analysis if call/jmp to this address",
 	"tn[n]", " sym.imp.exit", "same as above but for flag/fcn names",
 	"tnf", "", "same as `afl,noret/eq/1`",

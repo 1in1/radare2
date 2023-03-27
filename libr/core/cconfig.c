@@ -1492,7 +1492,7 @@ static bool cb_cfgsanbox_grain(void *user, void *data) {
 	RConfigNode *node = (RConfigNode*) data;
 	if (strstr (node->value, "?")) {
 		static RCoreHelpMessage help_msg_grain = {
-			"Usage:", "e cfg.sandbox.grain=arg[,arg...]", "set grain types to mask out",
+			"Usage:", "e cfg.sandbox.grain=arg[,arg...]", "# set grain types to mask out",
 			"Grain types:", "", "",
 			"", "all", "",
 			"", "none", "",

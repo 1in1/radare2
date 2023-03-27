@@ -9,7 +9,7 @@
 static int printzoomcallback(void *user, int mode, ut64 addr, ut8 *bufz, ut64 size);
 
 static RCoreHelpMessage help_msg_pa = {
-	"Usage: pa[edD]", "[asm|hex]", "print (dis)assembly",
+	"Usage: pa[edD]", "[asm|hex]", "# print (dis)assembly",
 	"pa", " [assembly]", "print hexpairs of the given assembly expression",
 	"paD", " [hexpairs]", "print assembly expression from hexpairs and show hexpairs",
 	"pad", " [hexpairs]", "print assembly expression from hexpairs (alias for pdx, pix)",
@@ -19,7 +19,7 @@ static RCoreHelpMessage help_msg_pa = {
 };
 
 static RCoreHelpMessage help_msg_psz = {
-	"Usage: psz[jl]", "", "print zero-terminated string",
+	"Usage: psz[jl]", "", "# print zero-terminated string",
 	"psz", "", "print zero-terminated string",
 	"psz*", "", "r2 command to write the null-terminated string in here",
 	"pszj", "", "print zero-terminated string as json",
@@ -38,14 +38,14 @@ static RCoreHelpMessage help_msg_p8 = {
 };
 
 static RCoreHelpMessage help_msg_pm = {
-	"Usage: pm", "[file|directory]", "set libmagic reference file or directory (see /m?)",
+	"Usage: pm", "[file|directory]", "# set libmagic reference file or directory (see /m?)",
 	"pm", " [file|directory]", "set libmagic reference (see /m?)",
 	"e", " dir.magic", "defaults to " R_JOIN_2_PATHS (R2_PREFIX, R2_SDB_MAGIC),
 	NULL
 };
 
 static RCoreHelpMessage help_msg_pp = {
-	"Usage: pp[d]", "", "print patterns",
+	"Usage: pp[d]", "", "# print patterns",
 	"pp0", "", "print buffer filled with zeros",
 	"pp1", "", "print incremental byte pattern (honor lower bits of cur address and bsize)",
 	"pp2", "", "print incremental word pattern",
@@ -88,7 +88,7 @@ static RCoreHelpMessage help_msg_pc = {
 };
 
 static RCoreHelpMessage help_msg_p6 = {
-	"Usage: p6[d|e][s|z]", " [len]", "base64 decoding/encoding",
+	"Usage: p6[d|e][s|z]", " [len]", "# base64 decoding/encoding",
 	"p6d", "[s|z] [len]", "decode current block as base64",
 	"p6e", "[s|z][len]", "encode current block in base64",
 	"p6ez", "", "encode base64 zero-terminated string",
@@ -99,7 +99,7 @@ static RCoreHelpMessage help_msg_p6 = {
 };
 
 static RCoreHelpMessage help_msg_pF = {
-	"Usage: pF[apdbA][*vqj]", "[len]", "parse ASN1, PKCS, X509, DER, protobuf, axml",
+	"Usage: pF[apdbA][*vqj]", "[len]", "# parse ASN1, PKCS, X509, DER, protobuf, axml",
 	"pFa", "[jq] [len]", "decode ASN1/DER from current block (PEM is B64(DER))",
 	"pFA", "[j] [len]", "decode Android Binary XML from current block",
 	"pFb", "[vj] [len]", "decode raw proto buffers in (verbose, JSON) format",
@@ -112,7 +112,7 @@ static RCoreHelpMessage help_msg_pF = {
 };
 
 static const char* help_msg_pr[] = {
-	"Usage: pr[glx]", "[size]", "print N raw bytes",
+	"Usage: pr[glx]", "[size]", "# print N raw bytes",
 	"prc", "[=fep..]", "print bytes as colors in palette",
 	"prg", "[?]", "print raw GUNZIPped block",
 	"pri", "[aA12r]", "print raw image, 1bit image, honor hex.cols",
@@ -124,7 +124,7 @@ static const char* help_msg_pr[] = {
 };
 
 static RCoreHelpMessage help_msg_prg = {
-	"Usage: prg[?ilo]", " [len]", "print raw inflated/decompressed block",
+	"Usage: prg[?ilo]", " [len]", "# print raw inflated/decompressed block",
 	"prg", "", "print gunzipped data of current block",
 	"prgl", "", "decompress current block using LZ4 (adjust blocksize)",
 	"prgi", "", "show consumed bytes when inflating",
@@ -133,7 +133,7 @@ static RCoreHelpMessage help_msg_prg = {
 };
 
 static RCoreHelpMessage help_msg_amper = {
-	"Usage:", "&[-|<cmd>]", "manage tasks (WARNING: Experimental. Use with caution!)",
+	"Usage:", "&[-|<cmd>]", "# manage tasks (WARNING: Experimental. Use with caution!)",
 	"&", " <cmd>", "run <cmd> in a new background task",
 	"&:", "<cmd>", "queue <cmd> to be executed later when possible",
 	"&t", " <cmd>", "run <cmd> in a new transient background task (auto-delete when it is finished)",
@@ -197,7 +197,7 @@ static RCoreHelpMessage help_msg_p = {
 };
 
 static RCoreHelpMessage help_msg_pxd = {
-	"Usage:", "pxd[1248] ([len])", "show decimal byte/short/word/dword dumps",
+	"Usage:", "pxd[1248] ([len])", "# show decimal byte/short/word/dword dumps",
 	"pxd", "", "show base10 signed decimal hexdumps",
 	"pxd1", "", "show byte hexdump (int8_t)",
 	"pxd2", "", "show short hexdump (int16_t)",
@@ -207,7 +207,7 @@ static RCoreHelpMessage help_msg_pxd = {
 };
 
 static RCoreHelpMessage help_msg_pxu = {
-	"Usage:", "pxu[1248] ([len])", "show unsigned decimal byte/short/word/dword dumps",
+	"Usage:", "pxu[1248] ([len])", "# show unsigned decimal byte/short/word/dword dumps",
 	"pxu", "", "show base10 unsigned decimal hexdumps",
 	"pxu1", "", "show byte hexdump (int8_t)",
 	"pxu2", "", "show short hexdump (int16_t)",
@@ -217,7 +217,7 @@ static RCoreHelpMessage help_msg_pxu = {
 };
 
 static RCoreHelpMessage help_msg_p_equal = {
-	"Usage:", "p=[=bep?][qj] [N] ([len]) ([offset]) ", "show entropy/printable chars/chars bars",
+	"Usage:", "p=[=bep?][qj] [N] ([len]) ([offset]) ", "# show entropy/printable chars/chars bars",
 	"e ", "zoom.in", "specify range for zoom",
 	"p=", "", "print bytes of current block in bars",
 	"p==", "[..]", "same subcommands as p=, using column bars instead of rows",
@@ -248,7 +248,7 @@ static RCoreHelpMessage help_msg_pj = {
 };
 
 static RCoreHelpMessage help_msg_p_minus = {
-	"Usage:", "p-[hej] [nblocks] ", "bar|json|histogram blocks",
+	"Usage:", "p-[hej] [nblocks] ", "# bar|json|histogram blocks",
 	"p-", " [nblocks]", "show ascii-art bar of metadata in file boundaries",
 	"p-e", " [nblocks]", "show ascii-art bar of entropy per block",
 	"p-h", " [nblocks]", "show histogram analysis of metadata per block",
@@ -290,7 +290,7 @@ static RCoreHelpMessage help_msg_pd = {
 };
 
 static RCoreHelpMessage help_msg_pde = {
-	"Usage:", "pde[q|qq|j] [N]", "disassemble N instructions following execution flow from current PC",
+	"Usage:", "pde[q|qq|j] [N]", "# disassemble N instructions following execution flow from current PC",
 	"pde", "", "disassemble N instructions following execution flow from current PC",
 	"pdeq", "", "disassemble N instructions following execution flow from current PC (like pdi)",
 	"pdeqq", "", "disassemble N instructions following execution flow from current PC (like pi)",
@@ -309,7 +309,7 @@ static RCoreHelpMessage help_msg_ph = {
 };
 
 static RCoreHelpMessage help_msg_pdu = {
-	"Usage:", "pdu[acios][j]", "disassemble instructions until condition",
+	"Usage:", "pdu[acios][j]", "# disassemble instructions until condition",
 	"pdua", "[j] [addr]", "disassemble until address",
 	"pduc", "[j]", "disassemble until call",
 	//"pdue", "[j] [expr]", "disassemble until esil expression",
@@ -469,14 +469,14 @@ static RCoreHelpMessage help_msg_po = {
 };
 
 static RCoreHelpMessage help_msg_pq = {
-	"Usage:", "pq[?z] [len]", "generate QR code in ascii art",
+	"Usage:", "pq[?z] [len]", "# generate QR code in ascii art",
 	"pq", " 32", "print QR code with the current 32 bytes",
 	"pqz", "", "print QR code with current string in current offset",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_ps = {
-	"Usage:", "ps[abijqpsuwWxz+] [N]", "print String",
+	"Usage:", "ps[abijqpsuwWxz+] [N]", "# print String",
 	"ps", "", "print string",
 	"ps+", "[j]", "print libc++ std::string (same-endian, ascii, zero-terminated)",
 	"psa", "", "print any type of string (psp/psw/psW/psz/..)",
@@ -495,7 +495,7 @@ static RCoreHelpMessage help_msg_ps = {
 };
 
 static RCoreHelpMessage help_msg_pt = {
-	"Usage: pt", "[dn]", "print timestamps",
+	"Usage: pt", "[dn]", "# print timestamps",
 	"pt.", "", "print current time",
 	"pt", "", "print UNIX time (32 bit `cfg.bigendian`) Since January 1, 1970",
 	"ptb", "", "print BEAT time (Swatch Internet Time)",
@@ -506,7 +506,7 @@ static RCoreHelpMessage help_msg_pt = {
 };
 
 static RCoreHelpMessage help_msg_pv = {
-	"Usage: pv[1248z][j]", "", "print value(s) given size and endian",
+	"Usage: pv[1248z][j]", "", "# print value(s) given size and endian",
 	"pv", "", "print bytes based on asm.bits",
 	"pv1", "", "print 1 byte in memory",
 	"pv2", "", "print 2 bytes in memory",
@@ -552,7 +552,7 @@ static RCoreHelpMessage help_msg_px = {
 };
 
 static RCoreHelpMessage help_msg_pz = {
-	"Usage: pz [len]", "", "print zoomed blocks (filesize/N)",
+	"Usage: pz [len]", "", "# print zoomed blocks (filesize/N)",
 	"e ", "zoom.maxsz", "max size of block",
 	"e ", "zoom.from", "start address",
 	"e ", "zoom.to", "end address",
@@ -569,7 +569,7 @@ static RCoreHelpMessage help_msg_pz = {
 };
 
 static RCoreHelpMessage help_msg_pxA = {
-	"Usage: pxA [len]", "", "show op analysis color map",
+	"Usage: pxA [len]", "", "# show op analysis color map",
 	"$$", "", "int/swi/trap/new",
 	"+-*/", "", "math ops",
 	"->", "", "push",
@@ -589,7 +589,7 @@ static RCoreHelpMessage help_msg_pxA = {
 };
 
 static RCoreHelpMessage help_msg_pg = {
-	"Usage: pg[-]", "[asm|hex]", "print (dis)assembled",
+	"Usage: pg[-]", "[asm|hex]", "# print (dis)assembled",
 	"pg", " [x y w h cmd]", "add a new gadget",
 	"pg", "", "print them all",
 	"pg", "*", "print the gadgets as r2 commands",

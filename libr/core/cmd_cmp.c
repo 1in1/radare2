@@ -3,7 +3,7 @@
 #include "r_core.h"
 
 static RCoreHelpMessage help_message_ci = {
-	"Usage: ci", "[sil] ([obid])", "compare two bin objects",
+	"Usage: ci", "[sil] ([obid])", "# compare two bin objects",
 	"cis", " 0", "compare symbols with current `ob 1` with given obid (0)",
 	"cii", " 0", "compare imports",
 	"cil", " 0", "compare libraries",
@@ -11,7 +11,7 @@ static RCoreHelpMessage help_message_ci = {
 };
 
 static RCoreHelpMessage help_msg_cmp = {
-	"Usage: cmp", " [file] [file]", "compare two ($alias) files, and change $? value",
+	"Usage: cmp", " [file] [file]", "# compare two ($alias) files, and change $? value",
 	"cmp", " ls ls.old", "compare contents of given files",
 	"cmp", " $a $b", "same as above but using alias files",
 	NULL
@@ -64,7 +64,7 @@ static RCoreHelpMessage help_msg_cu = {
 };
 
 static RCoreHelpMessage help_msg_cg = {
-	"Usage: cg", "", "graph compare",
+	"Usage: cg", "", "# graph compare",
 	"cg", " [file]", "diff ratio among functions (columns: off-A, match-ratio, off-B)",
 	"cgf", " [fcn]", "compare functions (curseek vs fcn)",
 	"cgo", "", "opcode-bytes code graph diff",
@@ -451,7 +451,7 @@ static void nowatchers(ut64 addr) {
 /* Returns 0 if operation succeeded, 1 otherwise */
 static int cmd_cmp_watcher(RCore *core, const char *input) {
 	static RCoreHelpMessage help_msg_cw = {
-		"Usage: cw", "[args]", "manage compare watchers; See if and how memory changes",
+		"Usage: cw", "[args]", "# manage compare watchers; See if and how memory changes",
 		"cw??", "", "show more info about watchers",
 		"cw ", "addr sz cmd", "add a compare watcher",
 		"cw", "[*qj] [addr]", "show compare watchers (*=r2 commands, q=quiet, j=json)",

@@ -14,7 +14,7 @@ static RCoreHelpMessage help_msg_ecH = {
 };
 
 static RCoreHelpMessage help_msg_e = {
-	"Usage:", "e [var[=value]]", "evaluable vars",
+	"Usage:", "e [var[=value]]", "# evaluable vars",
 	"e","?asm.bytes", "show description",
 	"e", "??", "list config vars with description",
 	"e", " a", "get value of var 'a'",
@@ -67,7 +67,7 @@ static RCoreHelpMessage help_msg_ec = {
 };
 
 static RCoreHelpMessage help_msg_eco = {
-	"Usage: eco[jc] [theme]", "", "load theme (cf. Path and dir.prefix)",
+	"Usage: eco[jc] [theme]", "", "# load theme (cf. Path and dir.prefix)",
 	"eco", "", "list available themes (See e dir.themes)",
 	"eco.", "", "display current theme name",
 	"eco*", "", "show current theme script",

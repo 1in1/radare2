@@ -41,21 +41,21 @@ static RCoreHelpMessage help_msg_s = {
 };
 
 static RCoreHelpMessage help_msg_sdot = {
-	"Usage:", "s.", "seek here or there (near seeks)",
+	"Usage:", "s.", "# seek here or there (near seeks)",
 	"s.", "", "seek here, same as 's $$'",
 	"s..", "32a8", "seek to the same address but replacing the lower nibbles",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_sh = {
-	"Usage:", "sh", "r2's posix shell compatible subset",
+	"Usage:", "sh", "# r2's posix shell compatible subset",
 	"sh", "", "enters a posix shell subset repl (requires scr.interactive)",
 	"sh", " [cmd]", "run the given line and update $?",
 	NULL
 };
 
 static RCoreHelpMessage help_msg_sC = {
-	"Usage:", "sC", "comment grep",
+	"Usage:", "sC", "# comment grep",
 	"sC", "*", "list all comments",
 	"sC", " str", "seek to the first comment matching 'str'",
 	NULL

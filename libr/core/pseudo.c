@@ -172,7 +172,7 @@ static int cmpnbbs(const void *_a, const void *_b) {
 #endif
 
 static RCoreHelpMessage help_msg_pdc = {
-	"Usage: pdc[oj]", "", "experimental, unreliable and hacky pseudo-decompiler",
+	"Usage: pdc[oj]", "", "# experimental, unreliable and hacky pseudo-decompiler",
 	"pdc", "", "pseudo decompile function in current offset",
 	"pdcc", "", "pseudo-decompile with C helpers around",
 	"pdco", "", "show associated offset next to pseudecompiled output",

@@ -4,7 +4,7 @@
 #include "r_core.h"
 
 static RCoreHelpMessage help_msg_lparen = {
-	"Usage:", "(foo args;cmd1;cmd2;..)", "aliases",
+	"Usage:", "(foo args;cmd1;cmd2;..)", "# aliases",
 	"(foo args;..;..)", "", "define a macro",
 	"(foo args;..;..)()", "", "define and call a macro",
 	"(-foo)", "", "remove a macro",

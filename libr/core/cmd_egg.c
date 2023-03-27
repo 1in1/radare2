@@ -3,7 +3,7 @@
 #include <r_core.h>
 
 static RCoreHelpMessage help_msg_g = {
-	"Usage:", "g[wcilper] [arg]", "Go compile shellcodes using asm.arch/bits/os",
+	"Usage:", "g[wcilper] [arg]", "# Go compile shellcodes using asm.arch/bits/os",
 	"g", " ", "compile the shellcode",
 	"g", " foo.r", "compile r_egg source file",
 	"gc", " cmd=/bin/ls", "set config option for shellcodes and encoders",

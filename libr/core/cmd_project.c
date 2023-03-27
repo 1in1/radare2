@@ -3,7 +3,7 @@
 #include <r_core.h>
 
 static RCoreHelpMessage help_msg_P = {
-	"Usage:", "P[?.+-*cdilnsS] [file]", "project management",
+	"Usage:", "P[?.+-*cdilnsS] [file]", "# project management",
 	"P", " [file]", "open project (formerly Po)",
 	"P.", "", "show current loaded project (see prj.name)",
 	"P+", " [name]", "save project (same as Ps, but doesnt checks for changes)",
@@ -27,7 +27,7 @@ static RCoreHelpMessage help_msg_P = {
 };
 
 static RCoreHelpMessage help_msg_Pn = {
-	"Usage:", "Pn[j-?] [...]", "project Notes",
+	"Usage:", "Pn[j-?] [...]", "# project Notes",
 	"Pn", "", "show project notes",
 	"Pn", " -", "edit notes with cfg.editor",
 	"Pn", " [base64]", "set notes text",
@@ -41,7 +41,7 @@ static RCoreHelpMessage help_msg_Pn = {
 };
 
 static RCoreHelpMessage help_msg_Pz = {
-	"Usage:", "Pz[ie] ([file])", "import/export Projects in Zip form",
+	"Usage:", "Pz[ie] ([file])", "# import/export Projects in Zip form",
 	"Pz", "", "export project to prjname.zrp",
 	"Pze", " foo.zrp", "export project, same as Pz",
 	"Pzi", " foo.zrp", "import radare2 project from given zrp file",

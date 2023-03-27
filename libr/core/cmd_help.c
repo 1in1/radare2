@@ -129,7 +129,7 @@ static ut32 vernum(const char *s) {
 }
 
 static RCoreHelpMessage help_msg_percent = {
-	"Usage:", "%[name[=value]]", "set each NAME to VALUE in the environment",
+	"Usage:", "%[name[=value]]", "# set each NAME to VALUE in the environment",
 	"%", "", "list all environment variables",
 	"%", "SHELL", "prints SHELL value",
 	"%", "TMPDIR=/tmp", "sets TMPDIR value to \"/tmp\"",
@@ -161,7 +161,7 @@ static RCoreHelpMessage help_msg_env = {
 };
 
 static RCoreHelpMessage help_msg_exclamation = {
-	"Usage:", "!<cmd>", "run given command as in system(3)",
+	"Usage:", "!<cmd>", "# run given command as in system(3)",
 	"!", "", "list all historic commands",
 	"!", "ls", "execute 'ls' in shell",
 	"!*", "r2p x", "run r2 command via r2pipe in current session",
@@ -379,7 +379,7 @@ static RCoreHelpMessage help_msg_question_V = {
 };
 
 static RCoreHelpMessage help_msg_greater_sign = {
-	"Usage:", "[cmd]>[file]", "redirects console from 'cmd' output to 'file'",
+	"Usage:", "[cmd]>[file]", "# redirects console from 'cmd' output to 'file'",
 	"[cmd] > [file]", "", "redirect STDOUT of 'cmd' to 'file'",
 	"[cmd] > $alias", "", "save the output of the command as an alias (see $?)",
 	"[cmd] H> [file]", "", "redirect html output of 'cmd' to 'file'",

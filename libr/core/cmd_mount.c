@@ -1,7 +1,7 @@
 /* radare - LGPL - Copyright 2009-2022 // pancake */
 
 static RCoreHelpMessage help_msg_m = {
-	"Usage:", "m[-?*dgy] [...] ", "mountpoints management",
+	"Usage:", "m[-?*dgy] [...] ", "# mountpoints management",
 	"m", " /mnt ext2 0", "mount ext2 fs at /mnt with delta 0 on IO",
 	"m", " /mnt", "mount fs at /mnt with autodetect fs and current offset",
 	"m", "", "list all mountpoints in human readable format",
@@ -28,7 +28,7 @@ static RCoreHelpMessage help_msg_m = {
 };
 
 static RCoreHelpMessage help_msg_mf = {
-	"Usage:", "mf[no] [...]", "search files matching name or offset",
+	"Usage:", "mf[no] [...]", "# search files matching name or offset",
 	"mfn", " /foo *.c","search files by name in /foo path",
 	"mfo", " /foo 0x5e91","search files by offset in /foo path",
 	NULL

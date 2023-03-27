@@ -300,7 +300,7 @@ static void siguza_xrefs(RCore *core, ut64 search, ut64 start, int lenbytes) {
 
 static int r_cmdsixref_call(void *user, const char *input) {
 	static RCoreHelpMessage help_msg_sixref = {
-		"Usage:", "sixref", "fast xref discovery in arm64 executable sections",
+		"Usage:", "sixref", "# fast xref discovery in arm64 executable sections",
 		"sixref", " [addr] [len]", "find xrefs in arm64 executable sections",
 		NULL
 	};
