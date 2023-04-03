@@ -435,7 +435,7 @@ static RCoreHelpMessage help_detail_ae = {
 };
 
 static RCoreHelpMessage help_msg_aea = {
-	"Examples:", "aea", "show regs and memory accesses used in a range",
+	"Usage:", "aea", "# show regs and memory accesses used in a range",
 	"aea", "  [ops]", "show regs/memory accesses used in N instructions",
 	"aea*", " [ops]", "create mem.* flags for memory accesses",
 	"aeab", "", "show regs used in current basic block",
@@ -459,7 +459,7 @@ static RCoreHelpMessage help_msg_aea = {
 };
 
 static RCoreHelpMessage help_msg_aec = {
-	"Examples:", "aec", "continue until ^c",
+	"Usage:", "aec", "# continue until ^c",
 	"aec", "", "continue until exception",
 	"aecs", "", "continue until syscall",
 	"aecc", "", "continue until call",
@@ -469,7 +469,7 @@ static RCoreHelpMessage help_msg_aec = {
 };
 
 static RCoreHelpMessage help_msg_aeC = {
-	"Examples:", "aeC", "arg0 arg1 ... @ calladdr",
+	"Usage:", "aeC arg0 arg1 ... @ calladdr", ""
 	"aeC", " 1 2 @ sym._add", "call sym._add(1,2)",
 	NULL
 };
